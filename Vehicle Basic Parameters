@@ -1,0 +1,48 @@
+%% Vehicle Basic Parameters
+% Andrew McClaskey
+
+clc
+clear
+close all
+
+%Constants
+gamma = 1.4;
+R = 1716; %Gas Constant [ft.lbf/R.slug]
+
+%These values are curve fit from general sizing information given in
+%"General Hypersonic Vehicles for Conceptual Design Analyses"
+Weight_gross = 750; %[lbm]
+Inlet_Diameter = 11; %[inches]
+Wing_Span = 55.47; %[inches]
+Aero_Ref_Area = 5109; %[sq. inches]
+LtD_max = 5; %Maximum Lift to Drag Ratio
+
+%Ambient Conditions
+M = [6 6.5];
+q_psf = 1500; %Constant q trajectory dynamic pressure
+
+%% Drag Calculation
+%Read in Excel file of Coefficient of Drag data
+%Currently uses phi = 0.5 data. This can be updated once we know the real
+%equivalence ratio
+xlsread('DragCoefficient.xlsx');
+AoA = xlsread('DragCoefficient.xlsx', 'B4:B9');
+C_D_M4 = xlsread('DragCoefficient.xlsx', 'C4:C9');
+C_D_M45 = xlsread('DragCoefficient.xlsx', 'D4:D9');
+C_D_M5 = xlsread('DragCoefficient.xlsx', 'E4:E9');
+C_D_M55 = xlsread('DragCoefficient.xlsx', 'F4:F9');
+C_D_M6 = xlsread('DragCoefficient.xlsx', 'G4:G9');
+C_D_M65 = xlsread('DragCoefficient.xlsx', 'H4:H9');
+C_D_M7 = xlsread('DragCoefficient.xlsx', 'I4:I9');
+% Calculate Drag for range of alpha for each mach number 
+% D = q*S*C_D
+D4 = (q_psf/144)*Aero_Ref_Area.*C_D_M4; %[lbf}
+D45 = (q_psf/144)*Aero_Ref_Area.*C_D_M45; %[lbf}
+D5 = (q_psf/144)*Aero_Ref_Area.*C_D_M5; %[lbf}
+D55 = (q_psf/144)*Aero_Ref_Area.*C_D_M55; %[lbf}
+D6 = (q_psf/144)*Aero_Ref_Area.*C_D_M6; %[lbf}
+D65 = (q_psf/144)*Aero_Ref_Area.*C_D_M65; %[lbf}
+D7 = (q_psf/144)*Aero_Ref_Area.*C_D_M7; %[lbf}
+
+output_drag_table = [D4 D45 D5 D55 D6 D65 D7]
+xlswrite('drag.xlsx',output_drag_table)
