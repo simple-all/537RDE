@@ -6,8 +6,6 @@ clear
 close all
 
 %Constants
-gamma = 1.4;
-R = 1716; %Gas Constant [ft.lbf/R.slug]
 
 %These values are curve fit from general sizing information given in
 %"General Hypersonic Vehicles for Conceptual Design Analyses"
