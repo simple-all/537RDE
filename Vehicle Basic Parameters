@@ -13,7 +13,7 @@ R = 1716; %Gas Constant [ft.lbf/R.slug]
 %"General Hypersonic Vehicles for Conceptual Design Analyses"
 Weight_gross = 750; %[lbm]
 Inlet_Diameter = 11; %[inches]
-Wing_Span = 55.47; %[inches]
+Wing_Span = 55.47; %[inches] Currently exceeds allowable dimensions
 Aero_Ref_Area = 5109; %[sq. inches]
 LtD_max = 5; %Maximum Lift to Drag Ratio
 
