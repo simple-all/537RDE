@@ -1,11 +1,8 @@
+function [inletDiameter, inletGap, totalLength, T2, Pr_needed, Pr_isolator, altitude] = genInlet(M0, q, mdot, M2, P2, coneAngle)
+%GENERATEINLET Summary of this function goes here
+%   Detailed explanation goes here
 % Preliminary sizeing of inlet, basic calculations
-close all;
-clear;
 
-coneAngle = 10; % [deg]
-inletDiameter = 0.213; % [m]
-M0 = 6; % Free stream mach
-q = 1500 * 47.8802588888; % [Pa] dynamic pressure
 gamma = 1.4; % Ratio of specific heats
 R_air = 287.058; % [J/kg*K] Air gas constant
 
@@ -22,17 +19,15 @@ alth = 0.3048 * [0 500 1000 1500 2000 2500 3000 3500 4000 4500 5000 6000 7000 80
 altT = 273 + [15 14 13 12 11 10 9 8 7 6 5 3 1 -1 -3 -5 -14 -24 -34 -44 -54 -57 -57 -57 -57 -57 -55 -52 -59 -46 -46 -46 -46 -46 -46];
 
 altitude = interp1(altPa, alth, P0);
-fprintf('Altitude: %0.3f km\n', altitude / 1e3);
 T0 = interp1(altPa, altT, P0, 'linear');
 
 rho0 = P0 / (R_air * T0);
 
-inletArea = pi * (inletDiameter / 2)^2; % [m^2]
 a0 = sqrt(gamma * R_air * T0); % [m/s] Free stream sound speed
 u0 = a0 * M0; % [m/s] Free stream velocity
+inletArea = mdot / (u0 * rho0);
+inletDiameter = sqrt(inletArea / pi) * 2; % [m]
 mdot = u0 * inletArea * rho0; % [kgamma/s] Inlet air mass flow
-fprintf('Mass Flow: %0.3f kg/s\n', mdot);
-
 
 % After shock properties
 
@@ -74,24 +69,13 @@ inletGap = (inletDiameter - inletInnerDiameter) / 2;
 isolatorLength = 9 * inletGap;
 coneLength = (inletDiameter / 2) / tand(shockAngle);
 totalLength = coneLength + isolatorLength;
-fprintf('Inlet Diameter: %0.3f m\nInlet Gap: %0.3f m\n', inletDiameter, inletGap);
-fprintf('Inlet System Length: %0.3f m\n', totalLength);
 % Recovery pressure
-Pr = 0.6; % Wild assumption
-Pr_isolator = Pr / Po2_Po1;
 
 % Isolator
-P2 = 101325 * 2; % [Pa]
-i = 1;
-for M2i = 2:0.1:3
-    M2(i) = M2i; % Isolator exit mach
-    Pt2 = aeroBox.isoBox.calcStagPressure('mach', M2(i), 'Ps', P2, 'gamma', gamma);
-    
-    Pr_needed(i) = Pt2 / Pt0;
-    i = i + 1;
+Pt2 = aeroBox.isoBox.calcStagPressure('mach', M2, 'Ps', P2, 'gamma', gamma);
+Pr_needed = Pt2 / Pt0;
+Pr_isolator = Pr_needed / Po2_Po1;
+T2 = aeroBox.isoBox.calcStaticTemp('mach', M2, 'Tt', Tt, 'gamma', gamma);
+
 end
-figure;
-plot(M2, Pr_needed);
-xlabel('Isolator Exit Mach');
-ylabel('Total Pressure Recovery');
-title('Total Pressure Recovery vs. Isolator Exit Mach');
+
