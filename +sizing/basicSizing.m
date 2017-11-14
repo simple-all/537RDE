@@ -7,7 +7,7 @@ coneAngle = 10; % [deg] Inlet cone half angle
 
 
 % Inlet sizing
-[inletDiameter, inletGap, inletSystemLength, T2, Pr, Pr_is, altitude] = inlet.genInlet(M0, q, mdot, M2, P2, coneAngle);
+[inletDiameter, inletGap, inletSystemLength, T2, Pr, Pr_is, altitude, P0] = inlet.genInlet(M0, q, mdot, M2, P2, coneAngle);
 if (Pr_is >= 1)
     warning('Invalid design! Isolator recovery pressure too high');
 end

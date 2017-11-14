@@ -3,7 +3,7 @@ close all;
 clear;
 
 coneAngle = 10; % [deg]
-inletDiameter = 0.213; % [m]
+inletDiameter = 0.25; % [m]
 M0 = 6; % Free stream mach
 q = 1500 * 47.8802588888; % [Pa] dynamic pressure
 gamma = 1.4; % Ratio of specific heats
