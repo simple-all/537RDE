@@ -43,7 +43,8 @@ func = @(Me) Me/Mt * ((1 + (GAMMA-1)/2*Mt^2)/(1 + (GAMMA-1)/2*Me^2))^...
     (1/(GAMMA-1)) * sqrt((1+(GAMMA-1)/2*Mt^2)/(1+(GAMMA-1)/2*Me^2)) -...
     1/Eps_max;
 
-Me = fsolve(func, M_guess);
+options = optimset('Display', 'off');
+Me = fsolve(func, M_guess, options);
 
 
 Ve = sqrt(2* GAMMA * (Ru/MW) * Ts_throat / (GAMMA-1) * ...
