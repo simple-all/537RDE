@@ -10,12 +10,13 @@ format compact
 %Constants
 b_max = 24; %[in]
 s = b_max/2; %[in] half span
-c_r = 120; %[in] Root chord (or length of combustion)
+c_r = 90; %[in] Root chord (or length of combustion)
 c_t = 20; %[in] tip chord
-Weight_gross = 750; %[lbm]
-Weight_zerofuel = 650; %[lbm] Estimated, needs to be updated once known
+Weight_gross = 300; %[lbm]
+
 %Inlet_Diameter = 11; %[inches]
 TSFC = 0.6; %Need a real value; used in Range equation
+rho_liqHyd = 4.423; %[lb/cu.ft]
 
 %Flight Conditions
 M = 6;
@@ -49,8 +50,9 @@ Aero_Ref_Area = (1/2)*(c_t + c_r)*s; %[sq. inches]
 sweep = atand((c_r - c_t)/s); %[deg] wing sweep angle
 wing_x = [0 0 s s];
 wing_y = [0 c_r c_t 0];
-% figure(1)
-% plot(wing_x, wing_y)
+figure(1)
+plot(wing_x, wing_y)
+axis([0 c_r/3 0 c_r])
 
 %% Lift, Drag, and L over D
 
@@ -70,12 +72,27 @@ C_L = Weight_gross/((q/144)*Aero_Ref_Area);
 %Calculate L/D using C_L and C_D
 L_D = C_L/C_D
 
+
+
+%% Tank Geometry
+% Split sphere and cylinder "pill capsle" style tank. d is diameter, r is
+% radius, l is total length of tank, a is length of center cylinder section
+DesiredTankPressure = 1.3; %[MPa] %Target Hydrogen Fuel Tank Pressure
+P_tank = DesiredTankPressure*(145.038) %[psi]
+d = [7 5 5]; %[in] Diameter of tank
+r = d./2; %[in]
+l = [60 30 30]; %[in] 3 tanks
+a = l - (2.*d) %[in]
+V_tank = pi.*r.^2.*((4/3).*r+a) %[cu.in]
+W_tank = (3*P_tank.*V_tank)./(1*10^6) %[lbm] %Burst pressure is 3 times max operating
+W_liqHyd = (rho_liqHyd/1728).*sum(V_tank)
+Weight_zerofuel = Weight_gross - W_liqHyd; %[lbm] 
+
 %% Range
 % Assumed the initial weight and zero fuel weight as specified in the
 % "constrants" section. Need to discuss the zero fuel weight.
 R_ft = 2*sqrt(2/(rho0*Aero_Ref_Area))*(1/(TSFC/3600))*(sqrt(C_L)/C_D)*(sqrt(Weight_gross)-sqrt(Weight_zerofuel));
 R_nm = R_ft/6076
-
 %% Maybe Junk
 %Read in Excel file of Coefficient of Drag data
 %Currently uses phi = 0.5 data. This can be updated once we know the real
