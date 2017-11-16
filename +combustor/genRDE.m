@@ -24,5 +24,6 @@ R = 8314/24.107; % [J/kg*K] Gas constant of burned gas
 gamma = 1.1854; % Ratio of specific heats
 tsteps = 1000;
 P0 = 3e3; % Atmospheric air pressure
+M = 2.5; % Combustion mach
 
-[Isp, F, Pmin] = combustor.solveRDE(Pr, Pmin, Tmax, v_cj, R, D_outer, D_inner, mdot_air, FAR, gamma, tsteps, P0, numDets);
+[Isp, F, Pmin] = combustor.solveRDE(Pr, Pmin, Tmax, v_cj, R, D_outer, D_inner, mdot_air, FAR, gamma, tsteps, P0, numDets, M);

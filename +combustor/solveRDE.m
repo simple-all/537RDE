@@ -1,4 +1,4 @@
-function [Isp_RDE, Thrust, Pmin] = solveRDE(Pr, Pmin, Tmax, v_cj, R, D_outer, D_inner, mdot_air, FAR, gamma, tsteps, P0, numDets)
+function [Isp_RDE, Thrust, Pmin] = solveRDE(Pr, Pmin, Tmax, v_cj, R, D_outer, D_inner, mdot_air, FAR, gamma, tsteps, P0, numDets, M)
 %solveRDE Time-stepped integration solver for an RDE
 % Uses the Stechmann model
 
@@ -14,7 +14,7 @@ eta_max = (pi * (D_outer / 2)^2) / A_t; % Maximum expansion ratio
 
 dt = tau_c / tsteps;
 err = inf;
-step = 1e7;
+step = 1e4;
 dir = 1;
 while abs(err) > 1e-6;
     
@@ -26,15 +26,21 @@ while abs(err) > 1e-6;
         T(i) = Tc(time);
         c_star(i) = sqrt(gamma * R * T(i)) / (gamma * sqrt((2 / (gamma + 1))^((gamma + 1) / (gamma - 1))));
         cf(i) = sqrt(F_gamma * (1 - ((P0 / P(i))^((gamma - 1) / gamma)))); % This is wring, needs adjusting
-        mdot(i) = (Pc(time) * A_t) / c_star(i) * (dt / tau_c);
+        mdot(i) = (P(i) * A_t) / c_star(i);
         Isp(i) = (cf(i) * c_star(i)) / 9.81;
         F(i) = mdot(i) * Isp(i) * 9.81;
         
         i = i + 1;
         time = time + dt;
     end
+    
+%     massFlow = 0;
+%     for i = 1:numel(mdot)
+%         massFlow = massFlow + mdot(i) * dt;
+%     end
+%     massFlow = massFlow / tau_c;
     massFlow = mean(mdot);
-    err = massFlow - mdot_air;
+    err = massFlow - (mdot_air * (FAR + 1));
     
     if sign(err) ~= dir
         step = step / 2;
