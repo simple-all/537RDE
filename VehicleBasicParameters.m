@@ -6,6 +6,7 @@ clear
 close all
 format compact
 
+%test
 
 %Constants
 b_max = 24; %[in]
