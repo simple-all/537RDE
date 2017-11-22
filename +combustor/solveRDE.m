@@ -1,6 +1,9 @@
-function [Isp_RDE, Thrust, Pmin] = solveRDE(Pr, Pmin, Tmax, v_cj, R, D_outer, D_inner, mdot_air, FAR, gamma, tsteps, P0, numDets, M)
+function [Isp_RDE, Thrust, Pmin] = solveRDE(Pr, Pmin, Tmax, v_cj, R, D_outer, D_inner, mdot_air, phi, gamma, tsteps, P0, numDets, M)
 %solveRDE Time-stepped integration solver for an RDE
 % Uses the Stechmann model
+
+FAR_stoich = 1/34.29623;
+FAR = FAR_stoich * phi;
 
 A_t = pi *((D_outer / 2)^2 - (D_inner / 2)^2); % [m^2] Throat area
 
