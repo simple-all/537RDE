@@ -1,4 +1,4 @@
-function [vcj,pr,T2]=CJ_detonation(f,T1)
+function [vcj,pr,T2,gamma2]=CJ_detonation(f,T1)
 error=1;
 
 h=120e6; % Heating value of the hydrogen 120e6 J/kg
