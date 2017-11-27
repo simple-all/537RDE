@@ -1,6 +1,6 @@
 %% getOperatingConditions
-% Finds operating conditions based on dynamic pressure (q) and Mach Number
-% (M)
+% Finds operating conditions based on dynamic pressure (q) [psf] and Mach
+% Mumber (M)
 
 function [Mach,altitude,P0,T0,rho0,v0] = getOperatingConditions(q,M)
 %% Find operating conditions
