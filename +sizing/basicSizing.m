@@ -1,21 +1,80 @@
-M0 = 6; % Free stream Mach
-q = 1500 * 47.8802589; % [Pa]
-mdot = 2.85; % [kg/s] Air mass flow rate
-M2 = 2.3; % Isolator exit mach
-P2 = 101325 * 2; % [Pa] Isolator exit static pressure
-coneAngle = 10; % [deg] Inlet cone half angle
+clear
 
+i_err = inf;
+i_maxErr = 10; % [Pa]
+Pmin = 170000; % [Pa] First guess at isolator exit pressure
 
-% Inlet sizing
-[inletDiameter, inletGap, inletSystemLength, T2, Pr, Pr_is, altitude, P0] = inlet.genInlet(M0, q, mdot, M2, P2, coneAngle);
-if (Pr_is >= 1)
-    warning('Invalid design! Isolator recovery pressure too high');
+% Assume 600 lb / 272 kg total mass
+m_vehicle = 272; % kg
+
+while (abs(i_err) > i_maxErr)
+    
+    M0 = 5.5; % Free stream Mach
+    q = 1500 * 47.8802589; % [Pa]
+    mdot_air = 1.3; % [kg/s] Air mass flow rate
+    M2 = (1/3) * M0; % Isolator exit mach
+    P2 = Pmin; % [Pa] Isolator exit static pressure
+    coneAngle = 10; % [deg] Inlet cone half angle
+    
+    
+    % Inlet sizing
+    [inletDiameter, inletGap, inletSystemLength, T2, Pr_inlet, Pr_is, altitude, P0, T0] = inlet.genInlet(M0, q, mdot_air, M2, P2, coneAngle);
+    if (Pr_is >= 1)
+        warning('Invalid design! Isolator recovery pressure too high');
+    end
+    
+    % Inlet area
+    areaInlet = pi * (inletDiameter / 2)^2;
+    aInlet = sqrt(1.4 * 287 * T0); % Sonic velocity at inlet
+    uInlet = aInlet * M0; % Velocity at inlet
+    ramDrag = mdot_air * uInlet;
+    
+    % Combustor
+    D_outer = 7 * 0.0254; % [m]
+    D_inner = 6.3 * 0.0254; % [m]
+    
+    Pmin_guess = 150e3; % [Pa] Initial guess at minimum pressure
+    phi = 0.8; % Equivalence Ratio
+    
+    numDets = 1; % Number of detonation waves (keep at 1 for basic sizing noone really understands it anyways)
+    
+    tsteps = 1000; % Number of integration steps
+    
+    c_err = inf;
+    c_maxErr = 100; % [Pa]
+    c_step = 10000;
+    c_lastDir = 1;
+    while abs(c_err) > c_maxErr
+        % Get CEA detonation parameters
+        [Pr, Tr, v_cj, R, gamma_det] = combustor.getCEAParams(phi, Pmin_guess, T2);
+        Tmax = T2 * Tr; % [K] Temperature of burned gas
+        [Isp, F, Pmin] = combustor.solveRDE(Pr, Pmin_guess, Tmax, v_cj, R, D_outer, D_inner, mdot_air, phi, gamma_det, tsteps, P0, numDets, M2);
+        
+        c_err = Pmin - Pmin_guess; % Pressure guess error
+        
+        if c_lastDir ~= sign(c_err)
+            c_step = c_step / 2;
+        end
+        
+        c_lastDir = sign(c_err);
+        
+        Pmin_guess = Pmin_guess + sign(c_err) * c_step;
+    end
+    
+    i_err = P2 - Pmin;
+        
 end
-fprintf('Operating at %0.3f km and a pressure recovery of %0.3f\n', altitude / 1e3, Pr);
 
+totalThrust = (F - ramDrag);
 
+T_w = (m_vehicle * 9.81) / totalThrust;
 
-
+fprintf('Operating at %0.3f km and a pressure recovery of %0.3f\n', altitude / 1e3, Pr_inlet);
+fprintf('Inlet diameter of %0.3f m\n', inletDiameter);
+fprintf('Combustion chamber outer diameter of %0.3f m\n', D_outer);
+fprintf('Isp: %0.2f s\nThrust: %0.3f kN\nMinimum chamber pressure: %0.3f kPa\n', Isp, F / 1000, Pmin / 1000);
+fprintf('Total Thrust: %0.3f kN\n', totalThrust / 1000);
+fprintf('Weight to thrust ratio of %0.2f\n', T_w);
 
 
 
