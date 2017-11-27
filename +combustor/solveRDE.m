@@ -28,7 +28,7 @@ while abs(err) > 1e-6;
         P(i) = Pc(time);
         T(i) = Tc(time);
         c_star(i) = sqrt(gamma * R * T(i)) / (gamma * sqrt((2 / (gamma + 1))^((gamma + 1) / (gamma - 1))));
-        cf(i) = sqrt(F_gamma * (1 - ((P0 / P(i))^((gamma - 1) / gamma)))); % This is wring, needs adjusting
+        cf(i) = sqrt(F_gamma * (1 - ((P0 / P(i))^((gamma - 1) / gamma))));
         mdot(i) = (P(i) * A_t) / c_star(i);
         Isp(i) = (cf(i) * c_star(i)) / 9.81;
         F(i) = mdot(i) * Isp(i) * 9.81;

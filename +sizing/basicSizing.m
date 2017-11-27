@@ -10,11 +10,13 @@ Pmin = 170000; % [Pa] First guess at isolator exit pressure
 % Assume 600 lb / 272 kg total mass
 m_vehicle = 272; % kg
 
+cea = nasa.CEARunner();
+
 while (abs(i_err) > i_maxErr)
     
     M0 = 5.5; % Free stream Mach
     q = 1500 * 47.8802589; % [Pa]
-    mdot_air = 2; % [kg/s] Air mass flow rate
+    mdot_air = 1.3; % [kg/s] Air mass flow rate
     M2 = (1/3) * M0; % Isolator exit mach
     P2 = Pmin; % [Pa] Isolator exit static pressure
     coneAngle = 10; % [deg] Inlet cone half angle
@@ -37,7 +39,7 @@ while (abs(i_err) > i_maxErr)
     D_inner = 6.3 * 0.0254; % [m]
     
     Pmin_guess = 150e3; % [Pa] Initial guess at minimum chamber pressure
-    phi = 1; % Equivalence Ratio
+    phi = 0.8; % Equivalence Ratio
     
     numDets = 1; % Number of detonation waves (keep at 1 for basic sizing noone really understands it anyways)
     
@@ -50,7 +52,14 @@ while (abs(i_err) > i_maxErr)
     c_lastDir = 1;
     while abs(c_err) > c_maxErr
         % Get CEA detonation parameters
-        [Pr, Tr, v_cj, R, gamma_det] = combustor.getCEAParams(phi, Pmin_guess, T2);
+        params = cea.run('problem', 'det', 'p,atm', Pmin_guess / 101325, 't,k', T2, ...
+            'phi', phi, 'reac', 'fuel' ,'H2', 'wt%', 100, 'oxid', ...
+            'Air', 'wt%', 100, 'end');
+        R = 8314 / params.output.burned.mw;
+        Pr = params.output.p_ratio;
+        Tr = params.output.t_ratio;
+        v_cj = params.output.det_vel;
+        gamma_det = params.output.burned.gamma;
         Tmax = T2 * Tr; % [K] Temperature of burned gas
         [Isp, F, Pmin] = combustor.solveRDE(Pr, Pmin_guess, Tmax, v_cj, R, D_outer, D_inner, mdot_air, phi, gamma_det, tsteps, P0, numDets, M2);
         
