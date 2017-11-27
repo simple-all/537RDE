@@ -1,4 +1,6 @@
-clear
+clear;
+close all;
+clc;
 
 i_err = inf;
 i_maxErr = 10; % [Pa]
@@ -9,7 +11,7 @@ m_vehicle = 272; % kg
 
 while (abs(i_err) > i_maxErr)
     
-    M0 = 5.5; % Free stream Mach
+    M0 = 6; % Free stream Mach
     q = 1500 * 47.8802589; % [Pa]
     mdot_air = 1.3; % [kg/s] Air mass flow rate
     M2 = (1/3) * M0; % Isolator exit mach
@@ -65,16 +67,34 @@ while (abs(i_err) > i_maxErr)
         
 end
 
+% Vehicle size
+b = 24; % [in] Wingspan
+c_r = 90; % [in] Root chord
+c_t = 30; % [in] Tip chord
+w_lb = 600; % [lb] Vehicle Weight
+w_kg = w_lb * 0.453592; % [kg] Vehicle Wieght
+
+q_psf = q / 47.8802589;
+q_psi = q_psf / 144;
+[LoD, Cl, Cd, Area] = VehicleBasicParameters.getLoD(q_psf, M0, b, c_r, c_t, w_lb);
+
 totalThrust = (F - ramDrag);
+drag = q_psi * Area * Cd * 4.44822; % N
+lift = q_psi * Area * Cl * 4.44822; % N
 
 T_w = (m_vehicle * 9.81) / totalThrust;
 
+fprintf('Flight at M = %0.2f, q = %0.3f psf\n', M0, q_psf);
 fprintf('Operating at %0.3f km and a pressure recovery of %0.3f\n', altitude / 1e3, Pr_inlet);
 fprintf('Inlet diameter of %0.3f m\n', inletDiameter);
 fprintf('Combustion chamber outer diameter of %0.3f m\n', D_outer);
-fprintf('Isp: %0.2f s\nThrust: %0.3f kN\nMinimum chamber pressure: %0.3f kPa\n', Isp, F / 1000, Pmin / 1000);
+fprintf('Isp: %0.2f s\nMinimum chamber pressure: %0.3f kPa\n', Isp, Pmin / 1000);
 fprintf('Total Thrust: %0.3f kN\n', totalThrust / 1000);
-fprintf('Weight to thrust ratio of %0.2f\n', T_w);
+fprintf('Weight to Thrust ratio of %0.2f\n', T_w);
+fprintf('Lift to Drag ratio of %0.2f\n', LoD); 
+fprintf('Excess Thrust: %0.3f N\n', totalThrust - drag);
+fprintf('Excess Lift: %0.3f N\n', lift - w_kg * 9.81);
+fprintf('Accelerating at %0.3f m/s^2\n', (totalThrust - drag) / w_kg);
 
 
 
