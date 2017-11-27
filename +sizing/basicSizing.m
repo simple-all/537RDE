@@ -10,10 +10,10 @@ Pmin = 170000; % [Pa] First guess at isolator exit pressure
 % Assume 600 lb / 272 kg total mass
 m_vehicle = 272; % kg
 
-phis = 0.4:0.05:2;
-M0 = 6; % Free stream Mach
+phis = [0.5 1];
+M0 = 5.5; % Free stream Mach
 q = 1500 * 47.8802589; % [Pa]
-mdot_air = 1.3; % [kg/s] Air mass flow rate
+mdot_air = 1.7; % [kg/s] Air mass flow rate
 M2 = (1/3) * M0; % Isolator exit mach
 if numel(phis) > 1
     waitString = @(x) sprintf('%0.1f%% Complete', x * 100);
@@ -49,8 +49,8 @@ for p_i = 1:numel(phis)
         ramDrag = mdot_air * uInlet;
         
         % Combustor
-        D_outer = 7 * 0.0254; % [m]
-        D_inner = 6.3 * 0.0254; % [m]
+        D_outer = 10 * 0.0254; % [m]
+        D_inner = 8.5 * 0.0254; % [m]
         
         Pmin_guess = 150e3; % [Pa] Initial guess at minimum chamber pressure
         
@@ -66,7 +66,7 @@ for p_i = 1:numel(phis)
         while abs(c_err) > c_maxErr
             % Get CEA detonation parameters
             params = cea.run('problem', 'det', 'p,atm', Pmin_guess / 101325, 't,k', T2, ...
-                'phi', phi, 'reac', 'fuel' ,'H2', 'wt%', 100, 'oxid', ...
+                'phi', phi, 'output', 'trans', 'reac', 'fuel' ,'C2H4', 'wt%', 100, 'oxid', ...
                 'Air', 'wt%', 100, 'end');
             R = 8314 / params.output.burned.mw;
             Pr = params.output.p_ratio;
