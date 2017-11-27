@@ -2,6 +2,7 @@ clear;
 close all;
 clc;
 
+% Iterate until isolator exit pressure is balanced
 i_err = inf;
 i_maxErr = 10; % [Pa]
 Pmin = 170000; % [Pa] First guess at isolator exit pressure
@@ -11,9 +12,9 @@ m_vehicle = 272; % kg
 
 while (abs(i_err) > i_maxErr)
     
-    M0 = 6; % Free stream Mach
+    M0 = 5.5; % Free stream Mach
     q = 1500 * 47.8802589; % [Pa]
-    mdot_air = 1.3; % [kg/s] Air mass flow rate
+    mdot_air = 2; % [kg/s] Air mass flow rate
     M2 = (1/3) * M0; % Isolator exit mach
     P2 = Pmin; % [Pa] Isolator exit static pressure
     coneAngle = 10; % [deg] Inlet cone half angle
@@ -35,13 +36,14 @@ while (abs(i_err) > i_maxErr)
     D_outer = 7 * 0.0254; % [m]
     D_inner = 6.3 * 0.0254; % [m]
     
-    Pmin_guess = 150e3; % [Pa] Initial guess at minimum pressure
-    phi = 0.8; % Equivalence Ratio
+    Pmin_guess = 150e3; % [Pa] Initial guess at minimum chamber pressure
+    phi = 1; % Equivalence Ratio
     
     numDets = 1; % Number of detonation waves (keep at 1 for basic sizing noone really understands it anyways)
     
     tsteps = 1000; % Number of integration steps
     
+    % Iterate until minimum chamber pressure is balanced
     c_err = inf;
     c_maxErr = 100; % [Pa]
     c_step = 10000;
