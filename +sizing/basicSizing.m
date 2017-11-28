@@ -10,15 +10,18 @@ Pmin = 170000; % [Pa] First guess at isolator exit pressure
 % Assume 600 lb / 272 kg total mass
 m_vehicle = 272; % kg
 
-phis = 1;
+phis = 0.45:0.01:0.51;
 M0 = 6.5; % Free stream Mach
 q = 1500 * 47.8802589; % [Pa]
-mdot_air = 2.5; % [kg/s] Air mass flow rate
+mdot_air = 2.; % [kg/s] Air mass flow rate
+coneAngle = 10; % [deg] Inlet cone half angle
 M2 = 0.33 * M0; % Isolator exit mach
+
 if numel(phis) > 1
     waitString = @(x) sprintf('%0.1f%% Complete', x * 100);
     wh = waitbar(0, waitString(0));
 end
+
 for p_i = 1:numel(phis)
     if numel(phis) > 1
         num = ((p_i - 0.5) / numel(phis));
@@ -32,7 +35,6 @@ for p_i = 1:numel(phis)
     while (abs(i_err) > i_maxErr)
         
         P2 = Pmin; % [Pa] Isolator exit static pressure
-        coneAngle = 10; % [deg] Inlet cone half angle
         
         % Inlet sizing
         [inletDiameter, inletGap, inletSystemLength, T2, Pr_inlet, Pr_is, altitude, P0, T0] = inlet.genInlet(M0, q, mdot_air, M2, P2, coneAngle);
@@ -47,8 +49,8 @@ for p_i = 1:numel(phis)
         ramDrag = mdot_air * uInlet;
         
         % Combustor
-        D_outer = 0.1337; % [m]
-        D_inner = 0.1001; % [m]
+        D_outer = 0.2; % [m]
+        D_inner = 0.17; % [m]
         
         Pmin_guess = 150e3; % [Pa] Initial guess at minimum chamber pressure
         

@@ -57,7 +57,7 @@ Po2_Po1=((((gamma+1)/2.*mn1.^2)./(1+(((gamma-1)/2).*mn1.^2))).^(gamma/(gamma-1))
 turnAngle = shockAngle;
 rho1 = rho0 * (((gamma + 1) * M0^2 * sind(turnAngle)^2) / ((gamma - 1) * M0^2 * sind(turnAngle)^2 + 2));
 T1 = T0 * (((2 * gamma * M0^2 * sind(turnAngle)^2 - (gamma - 1)) * ((gamma - 1) * M0^2 * sind(turnAngle)^2 + 2)) / ((gamma + 1)^2 * M0^2 * sind(turnAngle)^2));
-Tt = aeroBox.isoBox.calcStagTemp('mach', M1, 'gamma', gamma, 'Ts', T1);
+Tt = aeroBox.isoBox.calcStagTemp('mach', M0, 'gamma', gamma, 'Ts', T0);
 a1 = sqrt(gamma * R_air * T1);
 u1 = M1 * a1;
 % Find the area needed for this flow

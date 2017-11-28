@@ -1,4 +1,4 @@
-function [M2, P2, T2, mdot, coneLength] = solveInlet(inletDiameter, coneAngle, M0, Pr, altitude, mDrop)
+function [M2, P2, T2, mdot, coneLength, q, ramDrag] = solveInlet(inletDiameter, coneAngle, M0, Pr, altitude, mDrop)
 %SOLVEINLET Summary of this function goes here
 %   Detailed explanation goes here
 gamma = 1.4; % Ratio of specific heats
@@ -15,9 +15,13 @@ altT = 273 + [15 14 13 12 11 10 9 8 7 6 5 3 1 -1 -3 -5 -14 -24 -34 -44 -54 -57 -
 P0 = interp1(alth, altPa, altitude, 'linear'); % Freestream static pressure
 T0 = interp1(alth, altT, altitude, 'linear'); % Freestream static temperature
 rho0 = P0 / (R_air * T0);
+Pt0 = aeroBox.isoBox.calcStagPressure('mach', M0, 'gamma', gamma, 'Ps', P0);
+Tt = aeroBox.isoBox.calcStagTemp('mach', M0, 'gamma', gamma, 'Ts', T0);
 
 a0 = sqrt(gamma * R_air * T0); % [m/s] Free stream sound speed
 u0 = a0 * M0; % [m/s] Free stream velocity
+
+q = 0.5 * gamma * P0 * M0^2;
 
 inletArea = pi * (inletDiameter / 2)^2; % [m^2]
 mdot = u0 * inletArea * rho0; % [kg/s] Mass flow through inlet
@@ -53,7 +57,7 @@ shockAngle=conical.find_cone_shock_angle(M0,coneAngle,gamma);
 % u1 = M1 * a1;
 
 coneLength = (inletDiameter / 2) / tand(shockAngle);
-
+ramDrag = mdot * u0; % Ram drag
 M2 = mDrop * M0;
 
 % Isolator
