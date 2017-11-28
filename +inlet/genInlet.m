@@ -1,4 +1,4 @@
-function [inletDiameter, inletGap, totalLength, T2, Pr_needed, Pr_isolator, altitude, P0, T0] = genInlet(M0, q, mdot, M2, P2, coneAngle)
+function [inletDiameter, inletGap, totalLength, T2, Pr_needed, Pr_isolator, altitude, P0, T0, coneLength] = genInlet(M0, q, mdot, M2, P2, coneAngle)
 %GENERATEINLET Summary of this function goes here
 %   Detailed explanation goes here
 % Preliminary sizeing of inlet, basic calculations
@@ -41,7 +41,7 @@ vdash=sqrt((v(:,1).^2)+(v(:,2).^2));
 % converts the velocity values into Mach numbers
 mach=sqrt(2./(((vdash.^(-2))-1).*(gamma-1)));
 % find the Mach number of the ray nearest the cone
-M1=mach(length(mach));
+M1=mach(length(mach));  
 % calculates the Temperature ratio for the ray nearest the cone
 To_T=1+(((gamma-1)/2).*M1.^2);
 % calculates the Pressure ratio for the ray nearest the cone
