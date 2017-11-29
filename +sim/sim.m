@@ -2,9 +2,9 @@ clear;
 close all;
 clc;
 
-% Start at altitude of 25.963 km at 1,625.6 m/s
+% Start at altitude of 23.317 km at 1634.956 m/s
 
-craft = sim.Vehicle(1425.6, 23000);
+craft = sim.Vehicle(1634.95646331355, 23317);
 
 % Aero params
 craft.setAeroParams(0.03, 0.0100775, 0.929); % Cl, Cd, Area
@@ -13,11 +13,14 @@ craft.setAeroParams(0.03, 0.0100775, 0.929); % Cl, Cd, Area
 craft.setMass(272, 0.1); % Wet mass [kg], fuel mass fraction
 
 % Inlet params
-craft.setInlet(0.2, 10, 0.4, 1/3); % Inlet diameter [m], cone half angle [deg], Pr, Mr
+craft.setInlet(0.24, 10, 0.325, (1/3)); % Inlet diameter [m], cone half angle [deg], Pr, Mr
 
 % RDE params
-craft.setRDE(0.2, 0.17);
+craft.setRDE(0.1735, 0.13);
 
+% Flight profile params
+craft.setPhis(1, 0.515); % Phi accel, phi cruise
+craft.setTarget(6.5, 1500 * 47.8802589); % Target Mach, target dynamic pressure
 
 dt = 0.5;
 i = 1;
@@ -27,7 +30,7 @@ while(craft.fuelMass > 0)
     M = craft.getMach();
     fm = craft.fuelMass;
     q = craft.getDynamicPressure();
-    fprintf('Time: %0.1f, Mach: %0.3f, Q: %0.3f, Alt: %0.3f km, Fuel: %0.3f kg\n', time(i), M, q, craft.altitude / 1e3, fm);
+    fprintf('Time: %0.1f, Mach: %0.3f, q: %0.3f, Alt: %0.3f km, Fuel: %0.3f kg\n', time(i), M, q, craft.altitude / 1e3, fm);
     i = i + 1;
 end
 

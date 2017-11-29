@@ -1,4 +1,4 @@
-function [temp,press,rho,Hgeopvector]=atmosphere4(Hvector,GeometricFlag)
+function [temp,press,rho,Hgeopvector]=atmosphere(Hvector,GeometricFlag)
 %function [temp,press,rho,Hgeopvector]=atmosphere4(Hvector,GeometricFlag)
 % Standard Atmospheric data based on the 1976 NASA Standard Atmoshere.
 % Hvector is a vector of altitudes.
@@ -39,7 +39,7 @@ Hgeopvector=zeros(size(Hvector));
 % Convert from geometric altitude to geopotental altitude, if necessary.
 if GeometricFlag
 	Hgeopvector=(RE*Hvector)./(RE+Hvector);
-	disp('Convert from geometric altitude to geopotential altitude in feet')
+	%disp('Convert from geometric altitude to geopotential altitude in feet')
 else 
    Hgeopvector=Hvector;
    %disp('Input data is geopotential altitude in feet')

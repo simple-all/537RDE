@@ -4,18 +4,23 @@ clc;
 
 % Iterate until isolator exit pressure is balanced
 i_err = inf;
-i_maxErr = 10; % [Pa]
-Pmin = 170000; % [Pa] First guess at isolator exit pressure
+i_maxErr = 100; % [Pa]
+Pmin = 212604; % [Pa] First guess at isolator exit pressure
 
 % Assume 600 lb / 272 kg total mass
 m_vehicle = 272; % kg
 
-phis = 0.45:0.01:0.51;
+phis = 0.516;
 M0 = 6.5; % Free stream Mach
 q = 1500 * 47.8802589; % [Pa]
-mdot_air = 2.; % [kg/s] Air mass flow rate
+mdot_air = 3.4; % [kg/s] Air mass flow rate
 coneAngle = 10; % [deg] Inlet cone half angle
-M2 = 0.33 * M0; % Isolator exit mach
+M2 = (1/3) * M0; % Isolator exit mach
+tsteps = 1000; % Number of integration steps
+
+% Combustor
+D_outer = 0.1735; % [m]
+D_inner = 0.13; % [m]
 
 if numel(phis) > 1
     waitString = @(x) sprintf('%0.1f%% Complete', x * 100);
@@ -31,13 +36,13 @@ for p_i = 1:numel(phis)
     
     cea = nasa.CEARunner();
     i_err = inf;
-    
+    P2 = Pmin;
     while (abs(i_err) > i_maxErr)
         
-        P2 = Pmin; % [Pa] Isolator exit static pressure
+        P2 = 0.9 * (Pmin - P2) + P2; % [Pa] Isolator exit static pressure
         
         % Inlet sizing
-        [inletDiameter, inletGap, inletSystemLength, T2, Pr_inlet, Pr_is, altitude, P0, T0] = inlet.genInlet(M0, q, mdot_air, M2, P2, coneAngle);
+        [inletDiameter, inletGap, inletSystemLength, T2, Pr_inlet, Pr_is, altitude, P0, T0, coneLength, u0] = inlet.genInlet(M0, q, mdot_air, M2, P2, coneAngle);
         if (Pr_is >= 1)
             warning('Invalid design! Isolator recovery pressure too high');
         end
@@ -48,22 +53,19 @@ for p_i = 1:numel(phis)
         uInlet = aInlet * M0; % Velocity at inlet
         ramDrag = mdot_air * uInlet;
         
-        % Combustor
-        D_outer = 0.2; % [m]
-        D_inner = 0.17; % [m]
+
         
-        Pmin_guess = 150e3; % [Pa] Initial guess at minimum chamber pressure
+        Pmin_guess = P2; % [Pa] Initial guess at minimum chamber pressure
         
         numDets = 1; % Number of detonation waves (keep at 1 for basic sizing noone really understands it anyways)
         
-        tsteps = 1000; % Number of integration steps
         
         % Iterate until minimum chamber pressure is balanced
         c_err = inf;
         c_maxErr = 100; % [Pa]
         c_step = 10000;
         c_lastDir = 1;
-        while abs(c_err) > c_maxErr
+        while abs(c_err) > c_maxErr && c_step > 1
             % Get CEA detonation parameters
             params = cea.run('problem', 'det', 'p,atm', Pmin_guess / 101325, 't,k', T2, ...
                 'phi', phi, 'output', 'trans', 'reac', 'fuel' ,'C2H4', 'wt%', 100, 'oxid', ...
@@ -79,7 +81,7 @@ for p_i = 1:numel(phis)
             c_err = Pmin - Pmin_guess; % Pressure guess error
             
             if c_lastDir ~= sign(c_err)
-                c_step = c_step / 2;
+                c_step = min(c_step / 2, abs(c_err));
             end
             
             c_lastDir = sign(c_err);
@@ -114,7 +116,7 @@ for p_i = 1:numel(phis)
     p_Lift(p_i) = lift;
     
     if numel(phis) == 1
-        fprintf('Flight at M = %0.2f, q = %0.3f psf\n', M0, q_psf);
+        fprintf('Flight at M = %0.2f, u = %0.3f m/s, q = %0.3f psf\n', M0, u0, q_psf);
         fprintf('Operating at %0.3f km and a pressure recovery of %0.3f\n', altitude / 1e3, Pr_inlet);
         fprintf('Inlet diameter of %0.3f m\n', inletDiameter);
         fprintf('Combustion chamber outer diameter of %0.3f m\n', D_outer);
