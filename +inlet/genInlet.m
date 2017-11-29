@@ -1,4 +1,4 @@
-function [inletDiameter, inletGap, totalLength, T2, Pr_needed, Pr_isolator, altitude, P0, T0] = genInlet(M0, q, mdot, M2, P2, coneAngle)
+function [inletDiameter, inletGap, totalLength, T2, Pr_needed, Pr_isolator, altitude, P0, T0, coneLength] = genInlet(M0, q, mdot, M2, P2, coneAngle)
 %GENERATEINLET Summary of this function goes here
 %   Detailed explanation goes here
 % Preliminary sizeing of inlet, basic calculations
@@ -41,7 +41,7 @@ vdash=sqrt((v(:,1).^2)+(v(:,2).^2));
 % converts the velocity values into Mach numbers
 mach=sqrt(2./(((vdash.^(-2))-1).*(gamma-1)));
 % find the Mach number of the ray nearest the cone
-M1=mach(length(mach));
+M1=mach(length(mach));  
 % calculates the Temperature ratio for the ray nearest the cone
 To_T=1+(((gamma-1)/2).*M1.^2);
 % calculates the Pressure ratio for the ray nearest the cone
@@ -57,7 +57,7 @@ Po2_Po1=((((gamma+1)/2.*mn1.^2)./(1+(((gamma-1)/2).*mn1.^2))).^(gamma/(gamma-1))
 turnAngle = shockAngle;
 rho1 = rho0 * (((gamma + 1) * M0^2 * sind(turnAngle)^2) / ((gamma - 1) * M0^2 * sind(turnAngle)^2 + 2));
 T1 = T0 * (((2 * gamma * M0^2 * sind(turnAngle)^2 - (gamma - 1)) * ((gamma - 1) * M0^2 * sind(turnAngle)^2 + 2)) / ((gamma + 1)^2 * M0^2 * sind(turnAngle)^2));
-Tt = aeroBox.isoBox.calcStagTemp('mach', M1, 'gamma', gamma, 'Ts', T1);
+Tt = aeroBox.isoBox.calcStagTemp('mach', M0, 'gamma', gamma, 'Ts', T0);
 a1 = sqrt(gamma * R_air * T1);
 u1 = M1 * a1;
 % Find the area needed for this flow

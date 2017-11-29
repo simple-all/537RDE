@@ -2,15 +2,16 @@ function [Isp_RDE, Thrust, Pmin] = solveRDE(Pr, Pmin, Tmax, v_cj, R, D_outer, D_
 %solveRDE Time-stepped integration solver for an RDE
 % Uses the Stechmann model
 
-FAR_stoich = 1/34.29623;
+FAR_stoich = 1/14.78733504955836;
 FAR = FAR_stoich * phi;
 
 A_t = pi *((D_outer / 2)^2 - (D_inner / 2)^2); % [m^2] Throat area
 
 % Exponential decay factor
 tau_c = (pi * D_outer) / (v_cj * numDets); % Time between detonation fronts
-
 lambda = log(Pr)/tau_c;
+
+
 F_gamma = ((2 * gamma^2) / (gamma - 1)) * ((2 / (gamma + 1))^((gamma + 1) / (gamma - 1)));
 
 eta_max = (pi * (D_outer / 2)^2) / A_t; % Maximum expansion ratio
@@ -20,7 +21,6 @@ err = inf;
 step = 1e4;
 dir = 1;
 while abs(err) > 1e-6;
-    
     time = 0;
     i = 1;
     while time <= tau_c
@@ -28,7 +28,7 @@ while abs(err) > 1e-6;
         P(i) = Pc(time);
         T(i) = Tc(time);
         c_star(i) = sqrt(gamma * R * T(i)) / (gamma * sqrt((2 / (gamma + 1))^((gamma + 1) / (gamma - 1))));
-        cf(i) = sqrt(F_gamma * (1 - ((P0 / P(i))^((gamma - 1) / gamma)))); % This is wring, needs adjusting
+        cf(i) = sqrt(F_gamma * (1 - ((P0 / P(i))^((gamma - 1) / gamma))));
         mdot(i) = (P(i) * A_t) / c_star(i);
         Isp(i) = (cf(i) * c_star(i)) / 9.81;
         F(i) = mdot(i) * Isp(i) * 9.81;
@@ -37,11 +37,6 @@ while abs(err) > 1e-6;
         time = time + dt;
     end
     
-%     massFlow = 0;
-%     for i = 1:numel(mdot)
-%         massFlow = massFlow + mdot(i) * dt;
-%     end
-%     massFlow = massFlow / tau_c;
     massFlow = mean(mdot);
     err = massFlow - (mdot_air * (FAR + 1));
     
