@@ -10,7 +10,7 @@ craft = sim.Vehicle(1634.95646331355, 23317);
 craft.setAeroParams(0.03, 0.0100775, 0.929); % Cl, Cd, Area
 
 % Physical params
-craft.setMass(272, 0.1); % Wet mass [kg], fuel mass fraction
+craft.setMass(272, 0.15); % Wet mass [kg], fuel mass fraction
 
 % Inlet params
 craft.setInlet(0.24, 10, 0.325, (1/3)); % Inlet diameter [m], cone half angle [deg], Pr, Mr
