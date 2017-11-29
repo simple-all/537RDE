@@ -1,15 +1,14 @@
 %% getRange
-% Calculates range
+% Calculates range using the Breguet equation
 % Inputs
-% 1. Free Stream Density (rho0) [slugs/ft3]
-% 2. Wing Reference Area (Aero_Reference_Area) [Square inches]
-% 3. Lift Coefficient (C_L) [Nondim]
-% 4. Drag Coefficient (C_D) [pounds]
+% 1. Free Stream Velocity (v0) [ft/s]
+% 2. Lift Coefficient (C_L) [Nondim]
+% 3. Drag Coefficient (C_D) [Nondim]
+% 4. Specific Impulse (I_sp) [seconds]
 % 5. Gross Weight (weight_gross) [pounds]
 % 6. Zero Fuel Weight (weight_zerofuel) [pounds] 
 
-
-function [Range]=getRange(rho0,Aero_Ref_Area,TSFC, C_L, C_D, weight_gross, weight_zerofuel)
-R_ft = 2*sqrt(2./(rho0*Aero_Ref_Area))*(1/(TSFC/3600)).*(sqrt(C_L)./C_D)*(sqrt(weight_gross)-sqrt(weight_zerofuel)); %[feet]
-Range = R_ft./6076; %[Nautical Miles]
+function [Range]=getRange(v0, C_L, C_D, I_sp, weight_gross, weight_zerofuel)
+Range_ft = v0*(C_L/C_D)*I_sp*log(weight_gross/weight_zerofuel); %[ft]
+Range = Range_ft/6076; %[Nautical Miles]
 end
