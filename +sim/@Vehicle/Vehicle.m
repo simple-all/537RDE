@@ -5,10 +5,10 @@ classdef Vehicle < handle
     properties (SetAccess = private)
         wetMass % [kg] Initial wet mass of vehicle
         fuelMassFraction;
-        phi_accel = 1.4;
-        phi_cruise = 0.5;
-        targetMach = 6.5;
-        targetQ = 1500 * 47.8802589;
+        phi_accel;
+        phi_cruise;
+        targetMach;
+        targetQ;
         
         % Sim parameters
         time = 0; % [s] Current time in simulation/flight
@@ -45,21 +45,16 @@ classdef Vehicle < handle
     end
     
     properties (Access = private)
-        lastPmin = 118210; 
+        lastPmin = 213750; 
         lastDP = 1000;
         qLatch = 0;
+        distTraveled = 0;
     end
     
     properties (Constant)
         % Atmospheric parameters
         gamma_air = 1.4; % Ratio of specific heats
         R_air = 287.058; % [J/kg*K] Air gas constant
-        % [Pa] Atmpsheric pressure
-        altPa = 1e3 * [101.33 99.49 97.63 95.91 94.19 92.46 90.81 89.15 87.49 85.91 85.44 81.22 78.19 75.22 72.40 69.64 57.16 46.61 37.65 30.13 23.93 18.82 14.82 11.65 9.17 7.24 4.49 2.80 1.76 1.12 0.146 2.2e-2 1.09e-6 4.98e-7 4.8e-10];
-        % [m] Altitude
-        alth = 0.3048 * [0 500 1000 1500 2000 2500 3000 3500 4000 4500 5000 6000 7000 8000 9000 10000 15000 20000 25000 30000 35000 40000 45000 50000 55000 60000 70000 80000 90000 100000 150000 200000 300000 500000 2000000];
-        % [K] Atmospheric temperature
-        altT = 273 + [15 14 13 12 11 10 9 8 7 6 5 3 1 -1 -3 -5 -14 -24 -34 -44 -54 -57 -57 -57 -57 -57 -55 -52 -59 -46 -46 -46 -46 -46 -46];
     end
     
     methods
@@ -81,7 +76,7 @@ classdef Vehicle < handle
             obj.time = time;
             dt = obj.time - obj.lastRunTime;
             
-            [netThrust, Isp, Pmin, coneLength, q, P2, mdot_air] = obj.solveFlowpath(dt);
+            [netThrust, Isp, Pmin, coneLength, q, P2, mdot_air, alpha] = obj.solveFlowpath(dt);
             
             i = obj.log.i;
             obj.log.netThrust(i) = netThrust;
@@ -93,9 +88,22 @@ classdef Vehicle < handle
             obj.log.mdot_air(i) = mdot_air;
             obj.log.M(i) = obj.getMach();
             obj.log.altitude(i) = obj.altitude;
+            obj.log.alpha(i) = alpha;
+            obj.log.distance(i) = obj.distTraveled;
+            obj.log.fuelMass(i) = obj.fuelMass;
             
             obj.lastRunTime = obj.time;
             obj.log.i = obj.log.i + 1;
+        end
+        
+        function setPhis(obj, phi_accel, phi_cruise)
+            obj.phi_accel = phi_accel;
+            obj.phi_cruise = phi_cruise;
+        end
+        
+        function setTarget(obj, targetM, targetQ)
+            obj.targetMach = targetM;
+            obj.targetQ = targetQ;
         end
         
         function setAeroParams(obj, Cl, Cd, liftingArea)
@@ -124,7 +132,7 @@ classdef Vehicle < handle
             obj.detInnerDiameter = id;
         end
         
-        function [netThrust, Isp, Pmin, coneLength, q, P2, mdot_air] = solveFlowpath(obj, dt)
+        function [netThrust, Isp, Pmin, coneLength, q, P2, mdot_air, alpha] = solveFlowpath(obj, dt)
             % Get operating conditions
             M0 = obj.getMach();
             % Switch when we reach target mach
@@ -152,7 +160,7 @@ classdef Vehicle < handle
                 c_lastDir = 1;
                 tsteps = 1000;
                 numDets = 1;
-                while abs(c_err) > c_maxErr
+                while abs(c_err) > c_maxErr && c_step > 1
                     % Get CEA detonation parameters
                     params = obj.cea.run('problem', 'det', 'p,atm', Pmin_guess / 101325, 't,k', T2, ...
                         'phi', phi, 'output', 'trans', 'reac', 'fuel' ,'C2H4', 'wt%', 100, 'oxid', ...
@@ -177,7 +185,8 @@ classdef Vehicle < handle
                     
                     Pmin_guess = Pmin_guess + sign(c_err) * c_step;
                 end
-                obj.lastDP = max(abs(Pmin - obj.lastPmin), 10);
+                % Speed boost on future solution generation
+                obj.lastDP = max(abs(Pmin - obj.lastPmin), c_maxErr / 2);
                 obj.lastPmin = Pmin;
             else
                 Thrust = 0;
@@ -188,6 +197,8 @@ classdef Vehicle < handle
             % Try to increase Mach and q such that both reach their goal at
             % the same time
             if ~obj.qLatch
+                % Goal is to reach target mach and dynamic pressure at the
+                % same time
                 currM = obj.getMach();
                 currQ = obj.getDynamicPressure();
                 machLeft = obj.targetMach - currM;
@@ -218,13 +229,37 @@ classdef Vehicle < handle
                     end
                 end
             else
+                % Goal is to maintain dynamic pressure during cruise
+                qErr = inf;
+                maxMqErr = 10; % Within 10 Pa
                 alpha = 0;
+                step = 0.1; % Degrees
+                lastDir =1;
+                while abs(qErr) > maxMqErr
+                    acceleration = (netThrust - obj.getDrag - ...
+                        (obj.getTotalMass * 9.81 * sind(alpha))) / ...
+                        obj.getTotalMass;
+                    nextV = obj.velocity + acceleration * dt;
+                    nextAlt = obj.altitude + nextV * sind(alpha) * dt;
+                    nextQ = obj.getTraj(nextV, nextAlt);
+                    qErr = nextQ - obj.targetQ;
+                    if abs(qErr) > maxMqErr
+                        if sign(qErr) ~= lastDir
+                            step = step / 2;
+                        end
+                        lastDir = sign(qErr);
+                        
+                        % qErr > 1 => Increasing speed too much, should increase alpha
+                        alpha = alpha + sign(qErr) * step;
+                    end
+                end
             end
             acceleration = (netThrust - obj.getDrag - ...
                 (obj.getTotalMass * 9.81 * sind(alpha))) / ...
                 obj.getTotalMass;
             obj.velocity = obj.velocity + acceleration * dt;
             obj.altitude = obj.altitude + obj.velocity * sind(alpha) * dt;
+            obj.distTraveled = obj.distTraveled + obj.velocity * cosd(alpha) * dt;
             % Keep track of fuel
             obj.drainFuel(mdot_air, phi, dt);
         end
@@ -241,8 +276,7 @@ classdef Vehicle < handle
         
         function [q, M] = getTraj(obj, vel, alt)
             % Get the desired q and M for a velocity at an altitude
-            P0 = interp1(obj.alth, obj.altPa, alt, 'linear'); % Freestream static pressure
-            T0 = interp1(obj.alth, obj.altT, alt, 'linear'); % Freestream static temperature
+            [T0, P0] = atmosphere.atmosphere_metric(alt, 1);
             a = sqrt(obj.gamma_air * obj.R_air * T0);
             M = vel / a;
             q = 0.5 * obj.gamma_air * P0 * M^2;
@@ -275,8 +309,7 @@ classdef Vehicle < handle
         end
         
         function [P0, T0] = getLocalFlowParams(obj)
-            P0 = interp1(obj.alth, obj.altPa, obj.altitude, 'linear'); % Freestream static pressure
-            T0 = interp1(obj.alth, obj.altT, obj.altitude, 'linear'); % Freestream static temperature
+            [T0, P0] = atmosphere.atmosphere_metric(obj.altitude, 1);
         end
     end
     

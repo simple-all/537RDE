@@ -16,21 +16,35 @@ F_gamma = ((2 * gamma^2) / (gamma - 1)) * ((2 / (gamma + 1))^((gamma + 1) / (gam
 
 eta_max = (pi * (D_outer / 2)^2) / A_t; % Maximum expansion ratio
 
+a_star_c = A_t / aeroBox.isoBox.calcARatio(M, gamma);
+M_e = aeroBox.isoBox.machFromAreaRatio((pi * (D_outer / 2)^2) / a_star_c, gamma, 1);
+
 dt = tau_c / tsteps;
 err = inf;
 step = 1e4;
 dir = 1;
-while abs(err) > 1e-6;
+eta_nozzle = 0.93;
+while abs(err) > 1e-4;
     time = 0;
     i = 1;
     while time <= tau_c
         tt(i) = time;
         P(i) = Pc(time);
         T(i) = Tc(time);
+        
+        % Calculate exit pressure out of the nozzle
+        Pt = P(i) * ((1 + (((gamma - 1) / 2) * M^2))^(gamma / (gamma - 1)));
+        P_e = Pt / ((1 + (((gamma - 1) / 2) * M_e^2))^(gamma / (gamma - 1)));
+        
         c_star(i) = sqrt(gamma * R * T(i)) / (gamma * sqrt((2 / (gamma + 1))^((gamma + 1) / (gamma - 1))));
-        cf(i) = sqrt(F_gamma * (1 - ((P0 / P(i))^((gamma - 1) / gamma))));
+        
+        if (P_e < P0)
+            cf(i) = sqrt(F_gamma * (1 - ((P0 / P(i))^((gamma - 1) / gamma))));
+        else
+            cf(i) = sqrt(F_gamma * (1 - ((P_e / P(i))^((gamma - 1) / gamma)))) + eta_max * ((P_e / P(i)) - (P0 / P(i)));
+        end
         mdot(i) = (P(i) * A_t) / c_star(i);
-        Isp(i) = (cf(i) * c_star(i)) / 9.81;
+        Isp(i) = (cf(i) * c_star(i) * sqrt(eta_nozzle)) / 9.81;
         F(i) = mdot(i) * Isp(i) * 9.81;
         
         i = i + 1;
