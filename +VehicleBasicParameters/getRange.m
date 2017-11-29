@@ -9,7 +9,7 @@
 % 6. Zero Fuel Weight (weight_zerofuel) [pounds] 
 % 7. Altitude (altitude) [ft]
 
-function [Range]=getRange(v0, C_L, C_D, I_sp, weight_gross, weight_zerofuel, altitude)
+function [Range_cruise, Range_glide, Range]=getRange(v0, C_L, C_D, I_sp, weight_gross, weight_zerofuel, altitude)
 % Powered Flight
 Range_cruise_ft = v0*(C_L/C_D)*I_sp*log(weight_gross/weight_zerofuel); %[ft]
 Range_cruise = Range_cruise_ft/6076; %[Nautical Miles]

@@ -14,4 +14,4 @@ I_sp = 2000; %[s]
 
 [LoD, C_L, C_D, Aero_Ref_Area]=getLoD(q,M,b,c_r,c_t,weight_gross)
 
-[Range]=getRange(v0, C_L, C_D, I_sp, weight_gross, weight_zerofuel,altitude)
+[Range_cruise, Range_glide, Range]=getRange(v0, C_L, C_D, I_sp, weight_gross, weight_zerofuel,altitude)
