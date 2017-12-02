@@ -2,16 +2,9 @@
 % function that calcualtes the L/D given the following inputs...
 % 1. Dynamic Pressure in Pounds per Square Foot (q) [psf]
 % 2. Mach Number (M) [Nondim]
-% 3. Wing span (b) [inches]
-% 4. Root Chord (c_r) [inches]
-% 5. Tip Chord (c_t) [inches]
-% 6. Gross Weight (weight_gross) [pounds]
+% 3. Aero Reference Area )Areo_Ref_Area [sq.in]
 
-function [LoD_ideal,LoD_expected, C_L, C_D, Aero_Ref_Area]=getLoD(q,M,b,c_r,c_t,weight_gross)
-%% Aero Plan form
-s = b/2; %[in] half span
-Aero_Ref_Area = (c_t + c_r)*s; %[sq. inches]
-sweep = atand((c_r - c_t)/s); %[deg] wing sweep angle
+function [LoD, C_L, C_D]=getLoD(q,M,Aero_Ref_Area, weight_gross)
 
 %% Lift, Drag, and L over D
 % Drag Calculation
@@ -28,8 +21,5 @@ D = (q/144)*Aero_Ref_Area.*C_D; %[pounds]
 % the specified dynamic pressure
 C_L = weight_gross/((q/144)*Aero_Ref_Area); %[Nondim]
 % Calculate L/D using C_L and C_D
-LoD_ideal = C_L/C_D; %[Nondim]
-% Calculated L/D based on scaling of L/D data shown in Linston's
-% presentation due to Linston' demonstrating inability to hit design L/D
-LoD_expected = 1.617;
+LoD = C_L/C_D; %[Nondim]
 end
