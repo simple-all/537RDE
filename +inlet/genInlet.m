@@ -1,4 +1,4 @@
-function [inletDiameter, inletGap, totalLength, T2, Pr_needed, Pr_isolator, altitude, P0, T0, coneLength, u0] = genInlet(M0, q, mdot, M2, P2, coneAngle)
+function [inletDiameter, inletGap, totalLength, T2, Pr_needed, Pr_isolator, altitude, P0, T0, coneLength, u0, Tt] = genInlet(M0, q, mdot, M2, P2, coneAngle)
 %GENERATEINLET Summary of this function goes here
 %   Detailed explanation goes here
 % Preliminary sizeing of inlet, basic calculations

@@ -7,16 +7,16 @@ clc;
 craft = sim.Vehicle(1634.95646331355, 23317);
 
 % Aero params
-craft.setAeroParams(0.03, 0.0100775, 0.929); % Cl, Cd, Area
+craft.setAeroParams(0.03, 0.015, 0.929); % Cl, Cd, Area
 
 % Physical params
-craft.setMass(272, 0.15); % Wet mass [kg], fuel mass fraction
+craft.setMass(272, 0.08); % Wet mass [kg], fuel mass fraction
 
 % Inlet params
-craft.setInlet(0.24, 10, 0.325, (1/3)); % Inlet diameter [m], cone half angle [deg], Pr, Mr
+craft.setInlet(0.24, 0.127, 10, 0.3, (1/2)); % Inlet diameter [m], inlet gap [m] cone half angle [deg], Pr, Mr
 
 % RDE params
-craft.setRDE(0.1735, 0.13);
+craft.setRDE(0.2035, 0.16);
 
 % Flight profile params
 craft.setPhis(1, 0.515); % Phi accel, phi cruise

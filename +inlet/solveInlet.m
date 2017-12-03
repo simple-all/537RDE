@@ -1,4 +1,4 @@
-function [M2, P2, T2, mdot, coneLength, q, ramDrag] = solveInlet(inletDiameter, coneAngle, M0, Pr, altitude, mDrop)
+function [M2, P2, T2, mdot, coneLength, q, ramDrag, Pt2, Tt] = solveInlet(inletDiameter, coneAngle, M0, Pr, altitude, mDrop)
 %SOLVEINLET Summary of this function goes here
 %   Detailed explanation goes here
 gamma = 1.4; % Ratio of specific heats

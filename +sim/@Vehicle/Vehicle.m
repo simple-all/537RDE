@@ -20,6 +20,8 @@ classdef Vehicle < handle
         
         % Inlet parameters
         inletDiameter; % [m] Outer diameter of inlet
+        inletGap;
+        isolatorArea;
         inletConeAngle; % [deg] Half-angle of inlet cone
         Pr_inlet; % Pressure recovery factor of the inlet
         Mr_inlet = 0.33; % Mach ratio of the inlet-isolator system
@@ -27,6 +29,7 @@ classdef Vehicle < handle
         % Engine parameters
         detOuterDiameter; % [m] Outer diameter of engine
         detInnerDiameter; % [m] Inner diameter of engine
+        detArea;
         
         % Physical parameters
         dryMass; % [kg] Dry mass of vehicle
@@ -76,7 +79,7 @@ classdef Vehicle < handle
             obj.time = time;
             dt = obj.time - obj.lastRunTime;
             
-            [netThrust, Isp, Pmin, coneLength, q, P2, mdot_air, alpha] = obj.solveFlowpath(dt);
+            [netThrust, Isp, Pmin, coneLength, q, P2, mdot_air, alpha, Pavg, Tavg] = obj.solveFlowpath(dt);
             
             i = obj.log.i;
             obj.log.netThrust(i) = netThrust;
@@ -91,6 +94,8 @@ classdef Vehicle < handle
             obj.log.alpha(i) = alpha;
             obj.log.distance(i) = obj.distTraveled;
             obj.log.fuelMass(i) = obj.fuelMass;
+            obj.log.Tavg(i) = Tavg;
+            obj.log.Pavg(i) = Pavg;
             
             obj.lastRunTime = obj.time;
             obj.log.i = obj.log.i + 1;
@@ -120,8 +125,11 @@ classdef Vehicle < handle
             obj.dryMass = obj.wetMass - obj.fuelMass;
         end
         
-        function setInlet(obj, diameter, angle, Pr, Mr)
+        function setInlet(obj, diameter, inletGap, angle, Pr, Mr)
             obj.inletDiameter = diameter;
+            obj.inletGap = inletGap;
+            obj.isolatorArea = pi * ((obj.inletDiameter / 2)^2 - ...
+                ((obj.inletDiameter - (obj.inletGap))/2)^2);
             obj.inletConeAngle = angle;
             obj.Pr_inlet = Pr;
             obj.Mr_inlet = Mr;
@@ -130,9 +138,10 @@ classdef Vehicle < handle
         function setRDE(obj, od, id)
             obj.detOuterDiameter = od;
             obj.detInnerDiameter = id;
+            obj.detArea = pi * ((od/2)^2 - (id / 2)^2);
         end
         
-        function [netThrust, Isp, Pmin, coneLength, q, P2, mdot_air, alpha] = solveFlowpath(obj, dt)
+        function [netThrust, Isp, Pmin, coneLength, q, P3, mdot_air, alpha, Pavg, Tavg] = solveFlowpath(obj, dt)
             % Get operating conditions
             M0 = obj.getMach();
             % Switch when we reach target mach
@@ -144,7 +153,7 @@ classdef Vehicle < handle
             end
             
             % Solve the inlet
-            [M2, P2, T2, mdot_air, coneLength, q, ramDrag] = inlet.solveInlet(...
+            [M2, P2, T2, mdot_air, coneLength, q, ramDrag, Pt2, Tt2] = inlet.solveInlet(...
                 obj.inletDiameter, obj.inletConeAngle, M0, obj.Pr_inlet,...
                 obj.altitude, obj.Mr_inlet);
             
@@ -153,6 +162,17 @@ classdef Vehicle < handle
             if (obj.fuelMass > 0)
                 % Only burn if there is still fuel
                 % Iterate until minimum chamber pressure is balanced
+                
+                A_star_isolator = obj.isolatorArea / ...
+                    aeroBox.isoBox.calcARatio(M2, obj.gamma_air);
+                
+                M3 = aeroBox.isoBox.machFromAreaRatio(...
+                    obj.detArea / A_star_isolator, obj.gamma_air, 1);
+                P3 = aeroBox.isoBox.calcStaticPressure('mach', M3, ...
+                    'gamma', obj.gamma_air, 'Pt', Pt2);
+                T3 = aeroBox.isoBox.calcStaticTemp('mach', M3, ...
+                    'gamma', obj.gamma_air, 'Tt', Tt2);
+                
                 Pmin_guess = obj.lastPmin;
                 c_err = inf;
                 c_maxErr = 100; % [Pa]
@@ -162,7 +182,7 @@ classdef Vehicle < handle
                 numDets = 1;
                 while abs(c_err) > c_maxErr && c_step > 1
                     % Get CEA detonation parameters
-                    params = obj.cea.run('problem', 'det', 'p,atm', Pmin_guess / 101325, 't,k', T2, ...
+                    params = obj.cea.run('problem', 'det', 'p,atm', Pmin_guess / 101325, 't,k', T3, ...
                         'phi', phi, 'output', 'trans', 'reac', 'fuel' ,'C2H4', 'wt%', 100, 'oxid', ...
                         'Air', 'wt%', 100, 'end');
                     R = 8314 / params.output.burned.mw;
@@ -170,8 +190,8 @@ classdef Vehicle < handle
                     Tr = params.output.t_ratio;
                     v_cj = params.output.det_vel;
                     gamma_det = params.output.burned.gamma;
-                    Tmax = T2 * Tr; % [K] Temperature of burned gas
-                    [Isp, Thrust, Pmin] = combustor.solveRDE(Pr, Pmin_guess, ...
+                    Tmax = T3 * Tr; % [K] Temperature of burned gas
+                    [Isp, Thrust, Pmin, Pavg, Tavg] = combustor.solveRDE(Pr, Pmin_guess, ...
                         Tmax, v_cj, R, obj.detOuterDiameter, obj.detInnerDiameter, ...
                         mdot_air, phi, gamma_det, tsteps, P0, numDets, M2);
                     

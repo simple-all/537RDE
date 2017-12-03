@@ -1,4 +1,4 @@
-function [ lambda, D_outer, gap_width, D_inner,do_range, di_range] = getCombustorGeometry( fuel_cellsize )
+function [ lambda, D_outer, gap_width, D_inner,do_range, di_range, L] = getCombustorGeometry( fuel_cellsize )
 %getCombustorGeometry Uses basic empirical relations for sizing an RDE
 %combustor
 %   Everything taken from Bykovskii paper:
@@ -24,6 +24,7 @@ K = [5 9];
 do_range = (h * K) ./ pi;
 delta = 0.2 * h;
 di_range = do_range - 2 * delta;
+L = [2, 4] * h;
 
 
 

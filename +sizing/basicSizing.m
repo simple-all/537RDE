@@ -5,7 +5,7 @@ clc;
 % Iterate until isolator exit pressure is balanced
 i_err = inf;
 i_maxErr = 100; % [Pa]
-Pmin = 212604; % [Pa] First guess at isolator exit pressure
+Pmin = 40000; % [Pa] First guess at isolator exit pressure
 
 % Assume 600 lb / 272 kg total mass
 m_vehicle = 272; % kg
@@ -14,13 +14,14 @@ phis = 0.516;
 M0 = 6.5; % Free stream Mach
 q = 1500 * 47.8802589; % [Pa]
 mdot_air = 3.4; % [kg/s] Air mass flow rate
-coneAngle = 10; % [deg] Inlet cone half angle
-M2 = (1/3) * M0; % Isolator exit mach
+coneAngle = 5; % [deg] Inlet cone half angle
+M2 = (1/2) * M0; % Isolator exit mach
 tsteps = 1000; % Number of integration steps
 
 % Combustor
-D_outer = 0.1735; % [m]
-D_inner = 0.13; % [m]
+D_outer = 0.2035; % [m]
+D_inner = 0.16; % [m]
+A_comb = pi * ((D_outer / 2)^2 - (D_inner / 2)^2);
 
 if numel(phis) > 1
     waitString = @(x) sprintf('%0.1f%% Complete', x * 100);
@@ -42,20 +43,23 @@ for p_i = 1:numel(phis)
         P2 = 0.9 * (Pmin - P2) + P2; % [Pa] Isolator exit static pressure
         
         % Inlet sizing
-        [inletDiameter, inletGap, inletSystemLength, T2, Pr_inlet, Pr_is, altitude, P0, T0, coneLength, u0] = inlet.genInlet(M0, q, mdot_air, M2, P2, coneAngle);
+        [inletDiameter, inletGap, inletSystemLength, T2, Pr_inlet, Pr_is, altitude, P0, T0, coneLength, u0, Tt] = inlet.genInlet(M0, q, mdot_air, M2, P2, coneAngle);
+        A_isolator = pi * ((inletDiameter / 2)^2 - ((inletDiameter - (inletGap))/2)^2);
         if (Pr_is >= 1)
             warning('Invalid design! Isolator recovery pressure too high');
         end
-        
+        A_star_2 = A_isolator / aeroBox.isoBox.calcARatio(M2, 1.4);
         % Inlet area
         areaInlet = pi * (inletDiameter / 2)^2;
         aInlet = sqrt(1.4 * 287 * T0); % Sonic velocity at inlet
         uInlet = aInlet * M0; % Velocity at inlet
         ramDrag = mdot_air * uInlet;
         
-
-        
-        Pmin_guess = P2; % [Pa] Initial guess at minimum chamber pressure
+        P0_2 = aeroBox.isoBox.calcStagPressure('mach', M2, 'gamma', 1.4, 'Ps', P2);
+        M3 = aeroBox.isoBox.machFromAreaRatio(A_comb / A_star_2, 1.4, 1);
+        P3 = aeroBox.isoBox.calcStaticPressure('mach', M3, 'gamma', 1.4, 'Pt', P0_2);
+        T3 = aeroBox.isoBox.calcStaticTemp('mach', M3, 'gamma', 1.4, 'Tt', Tt);
+        Pmin_guess = P3; % [Pa] Initial guess at minimum chamber pressure
         
         numDets = 1; % Number of detonation waves (keep at 1 for basic sizing noone really understands it anyways)
         
@@ -67,7 +71,7 @@ for p_i = 1:numel(phis)
         c_lastDir = 1;
         while abs(c_err) > c_maxErr && c_step > 1
             % Get CEA detonation parameters
-            params = cea.run('problem', 'det', 'p,atm', Pmin_guess / 101325, 't,k', T2, ...
+            params = cea.run('problem', 'det', 'p,atm', Pmin_guess / 101325, 't,k', T3, ...
                 'phi', phi, 'output', 'trans', 'reac', 'fuel' ,'C2H4', 'wt%', 100, 'oxid', ...
                 'Air', 'wt%', 100, 'end');
             R = 8314 / params.output.burned.mw;
@@ -89,7 +93,7 @@ for p_i = 1:numel(phis)
             Pmin_guess = Pmin_guess + sign(c_err) * c_step;
         end
         
-        i_err = P2 - Pmin;
+        i_err = P3 - Pmin;
         
     end
     
