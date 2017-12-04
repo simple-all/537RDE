@@ -1,4 +1,4 @@
-function [Isp_RDE, Thrust, Pmin, Pavg, Tavg] = solveRDE(Pr, Pmin, Tmax, v_cj, R, D_outer, D_inner, mdot_air, phi, gamma, tsteps, P0, numDets, M)
+function [Isp_RDE, Thrust, Pmin, Pavg, Tavg, Pmax] = solveRDE(Pr, Pmin, Tmax, v_cj, R, D_outer, D_inner, mdot_air, phi, gamma, tsteps, P0, numDets, M)
 %solveRDE Time-stepped integration solver for an RDE
 % Uses the Stechmann model
 
@@ -78,6 +78,7 @@ Isp_RDE = Isp_RDE / m_cyc;
 Thrust = mean(F);
 Pavg = mean(P);
 Tavg = mean(T);
+Pmax = max(P);
 
     function p = Pc(time)
         p = Pr * Pmin * exp(-lambda * time);

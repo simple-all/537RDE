@@ -79,7 +79,7 @@ classdef Vehicle < handle
             obj.time = time;
             dt = obj.time - obj.lastRunTime;
             
-            [netThrust, Isp, Pmin, coneLength, q, P2, mdot_air, alpha, Pavg, Tavg] = obj.solveFlowpath(dt);
+            [netThrust, Isp, Pmin, coneLength, q, P3, mdot_air, alpha, Pavg, Tavg, Ptc] = obj.solveFlowpath(dt);
             
             i = obj.log.i;
             obj.log.netThrust(i) = netThrust;
@@ -87,7 +87,7 @@ classdef Vehicle < handle
             obj.log.Pmin(i) = Pmin;
             obj.log.coneLength(i) = coneLength;
             obj.log.q(i) = q;
-            obj.log.P2(i) = P2;
+            obj.log.P3(i) = P3;
             obj.log.mdot_air(i) = mdot_air;
             obj.log.M(i) = obj.getMach();
             obj.log.altitude(i) = obj.altitude;
@@ -96,6 +96,7 @@ classdef Vehicle < handle
             obj.log.fuelMass(i) = obj.fuelMass;
             obj.log.Tavg(i) = Tavg;
             obj.log.Pavg(i) = Pavg;
+            obj.log.Ptc(i) = Ptc;
             
             obj.lastRunTime = obj.time;
             obj.log.i = obj.log.i + 1;
@@ -141,7 +142,7 @@ classdef Vehicle < handle
             obj.detArea = pi * ((od/2)^2 - (id / 2)^2);
         end
         
-        function [netThrust, Isp, Pmin, coneLength, q, P3, mdot_air, alpha, Pavg, Tavg] = solveFlowpath(obj, dt)
+        function [netThrust, Isp, Pmin, coneLength, q, P3, mdot_air, alpha, Pavg, Tavg, Ptc] = solveFlowpath(obj, dt)
             % Get operating conditions
             M0 = obj.getMach();
             % Switch when we reach target mach
@@ -191,10 +192,10 @@ classdef Vehicle < handle
                     v_cj = params.output.det_vel;
                     gamma_det = params.output.burned.gamma;
                     Tmax = T3 * Tr; % [K] Temperature of burned gas
-                    [Isp, Thrust, Pmin, Pavg, Tavg] = combustor.solveRDE(Pr, Pmin_guess, ...
+                    [Isp, Thrust, Pmin, Pavg, Tavg, Pmax] = combustor.solveRDE(Pr, Pmin_guess, ...
                         Tmax, v_cj, R, obj.detOuterDiameter, obj.detInnerDiameter, ...
                         mdot_air, phi, gamma_det, tsteps, P0, numDets, M2);
-                    
+                    Ptc = aeroBox.isoBox.calcStagPressure('mach', M3, 'Ps', Pmax, 'gamma', gamma_det);
                     c_err = Pmin - Pmin_guess; % Pressure guess error
                     
                     if c_lastDir ~= sign(c_err)
@@ -230,10 +231,12 @@ classdef Vehicle < handle
                 lastDir =1;
                 while abs(mqErr) > maxMqErr
                     acceleration = (netThrust - obj.getDrag - ...
+                        obj.getLift*sind(alpha) - ...
                         (obj.getTotalMass * 9.81 * sind(alpha))) / ...
                         obj.getTotalMass;
                     nextV = obj.velocity + acceleration * dt;
-                    nextAlt = obj.altitude + nextV * sind(alpha) * dt;
+                    nextAlt = obj.altitude + nextV * sind(alpha) * dt + ...
+                        ((obj.getLift * cosd(alpha) - obj.getTotalMass * 9.81) / obj.getTotalMass) * dt;
                     [nextQ, nextM] = obj.getTraj(nextV, nextAlt);
                     dQ = (nextQ - currQ) / qLeft;
                     dMach = (nextM - currM) / machLeft;
@@ -251,16 +254,18 @@ classdef Vehicle < handle
             else
                 % Goal is to maintain dynamic pressure during cruise
                 qErr = inf;
-                maxMqErr = 10; % Within 10 Pa
+                maxMqErr = 1; % Within 10 Pa
                 alpha = 0;
                 step = 0.1; % Degrees
                 lastDir =1;
                 while abs(qErr) > maxMqErr
                     acceleration = (netThrust - obj.getDrag - ...
+                        obj.getLift*sind(alpha) - ...
                         (obj.getTotalMass * 9.81 * sind(alpha))) / ...
                         obj.getTotalMass;
                     nextV = obj.velocity + acceleration * dt;
-                    nextAlt = obj.altitude + nextV * sind(alpha) * dt;
+                    nextAlt = obj.altitude + nextV * sind(alpha) * dt + ...
+                        ((obj.getLift * cosd(alpha) - obj.getTotalMass * 9.81) / obj.getTotalMass) * dt;
                     nextQ = obj.getTraj(nextV, nextAlt);
                     qErr = nextQ - obj.targetQ;
                     if abs(qErr) > maxMqErr
@@ -275,10 +280,12 @@ classdef Vehicle < handle
                 end
             end
             acceleration = (netThrust - obj.getDrag - ...
-                (obj.getTotalMass * 9.81 * sind(alpha))) / ...
-                obj.getTotalMass;
+                        obj.getLift*sind(alpha) - ...
+                        (obj.getTotalMass * 9.81 * sind(alpha))) / ...
+                        obj.getTotalMass;
             obj.velocity = obj.velocity + acceleration * dt;
-            obj.altitude = obj.altitude + obj.velocity * sind(alpha) * dt;
+            obj.altitude = obj.altitude + obj.velocity * sind(alpha) * dt + ...
+                ((obj.getLift * cosd(alpha) - obj.getTotalMass * 9.81) / obj.getTotalMass) * dt;
             obj.distTraveled = obj.distTraveled + obj.velocity * cosd(alpha) * dt;
             % Keep track of fuel
             obj.drainFuel(mdot_air, phi, dt);
