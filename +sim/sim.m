@@ -10,7 +10,7 @@ craft = sim.Vehicle(1634.95646331355, 23317);
 craft.setAeroParams(0.03, 0.015, 0.929); % Cl, Cd, Area
 
 % Physical params
-craft.setMass(272, 0.08); % Wet mass [kg], fuel mass fraction
+craft.setMass(296.3, 0.0708); % Wet mass [kg], fuel mass fraction
 
 % Inlet params
 craft.setInlet(0.24, 0.127, 10, 0.3, (1/2)); % Inlet diameter [m], inlet gap [m] cone half angle [deg], Pr, Mr
@@ -19,7 +19,7 @@ craft.setInlet(0.24, 0.127, 10, 0.3, (1/2)); % Inlet diameter [m], inlet gap [m]
 craft.setRDE(0.2035, 0.16);
 
 % Flight profile params
-craft.setPhis(1, 0.515); % Phi accel, phi cruise
+craft.setPhis(1, 0.58); % Phi accel, phi cruise
 craft.setTarget(6.5, 1500 * 47.8802589); % Target Mach, target dynamic pressure
 
 dt = 0.5;

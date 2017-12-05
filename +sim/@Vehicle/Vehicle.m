@@ -193,7 +193,7 @@ classdef Vehicle < handle
                     Tmax = T3 * Tr; % [K] Temperature of burned gas
                     [Isp, Thrust, Pmin, Pavg, Tavg] = combustor.solveRDE(Pr, Pmin_guess, ...
                         Tmax, v_cj, R, obj.detOuterDiameter, obj.detInnerDiameter, ...
-                        mdot_air, phi, gamma_det, tsteps, P0, numDets, M2);
+                        mdot_air, phi, gamma_det, tsteps, P0, numDets, M3);
                     
                     c_err = Pmin - Pmin_guess; % Pressure guess error
                     

@@ -34,7 +34,12 @@ while abs(err) > 1e-4;
         
         % Calculate exit pressure out of the nozzle
         Pt = P(i) * ((1 + (((gamma - 1) / 2) * M^2))^(gamma / (gamma - 1)));
+        Tt = T(i) * ((1 + (((gamma - 1) / 2) * M^2)));
         P_e = Pt / ((1 + (((gamma - 1) / 2) * M_e^2))^(gamma / (gamma - 1)));
+        T_e = Tt / ((1 + (((gamma - 1) / 2) * M_e^2)));
+        
+        P_ei(i) = P_e;
+        T_ei(i) = T_e;
         
         c_star(i) = sqrt(gamma * R * T(i)) / (gamma * sqrt((2 / (gamma + 1))^((gamma + 1) / (gamma - 1))));
         
