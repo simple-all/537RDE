@@ -1,4 +1,3 @@
-function [Isp_RDE, Thrust, Pmin, Pavg, Tavg] = solveRDE(Pr, Pmin, Tmax, v_cj, R, D_outer, D_inner, mdot_air, phi, gamma, tsteps, P0, numDets, M)
 %solveRDE Time-stepped integration solver for an RDE
 % Uses the Stechmann model
 
