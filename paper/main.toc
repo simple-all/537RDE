@@ -1,0 +1,25 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Abstract}{2}
+\contentsline {section}{\numberline {2}Introduction}{2}
+\contentsline {section}{\numberline {3}Design Methodology}{3}
+\contentsline {subsection}{\numberline {3.1}Mission Design and Constraints}{3}
+\contentsline {subsection}{\numberline {3.2}Vehicle Trajectory [Andy McClaskey]}{3}
+\contentsline {subsection}{\numberline {3.3}Aerodynamic Performance Analysis [Andy McClaskey]}{3}
+\contentsline {paragraph}{Aerodynamic Reference Area}{3}
+\contentsline {paragraph}{Drag Determination}{3}
+\contentsline {paragraph}{Thrust Required}{3}
+\contentsline {paragraph}{Lift Determination}{3}
+\contentsline {paragraph}{Lift over Drag}{3}
+\contentsline {subsection}{\numberline {3.4}Inlet, Isolator, and Compression Duct [Thomas Satterly]}{4}
+\contentsline {paragraph}{Inlet}{4}
+\contentsline {paragraph}{Isolator}{4}
+\contentsline {paragraph}{Compression Duct}{4}
+\contentsline {subsection}{\numberline {3.5}Combustor [Thomas Satterly]}{5}
+\contentsline {subsection}{\numberline {3.6}Nozzle [Gabriel Diez]}{6}
+\contentsline {subsection}{\numberline {3.7}Cooling}{6}
+\contentsline {subsubsection}{\numberline {3.7.1}Combustor [Cameron Ellis]}{6}
+\contentsline {subsubsection}{\numberline {3.7.2}Nozzle [Gabriel Diez]}{7}
+\contentsline {subsection}{\numberline {3.8}Turbopump and Tank Sizing [Drew Sherman]}{8}
+\contentsline {section}{\numberline {4}Results}{9}
+\contentsline {section}{\numberline {5}Conclusions}{9}
+\contentsline {section}{\numberline {6}Appendix}{9}

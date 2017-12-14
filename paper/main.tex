@@ -1,0 +1,49 @@
+\documentclass[11pt,a4paper,titlepage,openbib]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{blindtext}
+\usepackage[english]{babel}
+\usepackage[nottoc]{tocbibind}
+
+% Define the title page
+\title{Gas Fueled RDE Scramjet}
+\author{
+	Gabriel Diez\\
+	\and
+	Cameron Ellis\\
+	\and
+	Alberto Marin Cebrian\\
+	\and
+	Andrew McClaskey
+	\and
+	Thomas Satterly\\
+	\and
+	Drew Sherman
+}
+
+
+\begin{document}
+% Insert the title at the front
+\maketitle
+% Table of conents
+\tableofcontents
+\newpage
+
+% Abstract
+\input{abstract.tex}
+% Introduction
+\input{introduction.tex}
+% Design Methodology
+\input{design.tex}
+% Results
+\input{results.tex}
+% Conclusions
+\input{conclusions.tex}
+% References
+\bibliography{bibliography}
+% Appendix
+\input{appendix.tex}
+
+\end{document}
