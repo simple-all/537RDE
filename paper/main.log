@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.10)  14 DEC 2017 17:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.10)  14 DEC 2017 17:59
 entering extended mode
 **./main.tex
 (main.tex
@@ -490,31 +490,1092 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1]
 (abstract.tex) (introduction.tex) (design.tex (vehicleTraj.tex [2])
 (aeroPerformance.tex) (inletSystem.tex [3]) (combustor.tex [4]) (nozzle.tex
-[5]) (cooling.tex [6]
-Overfull \hbox (5.51463pt too wide) in paragraph at lines 15--17
+[5]) (heatTransfer.tex [6]
+Overfull \hbox (5.51463pt too wide) in paragraph at lines 18--19
 []\OT1/cmr/m/n/10.95 The above plot dis-plays the elon-ga-tion, ten-sile streng
 th, and yield strength
  []
 
-) (turbo.tex [7] [8])) (results.tex) (conclusions.tex)
+[7]
+
+! Package inputenc Error: Unicode char γ (U+3B3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 ...s been assumed that the air properties (γ
+                                                   in particular) will also ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ρ (U+3C1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 ρ
+        [kg⁄m^3 ]	0.0382	0.1126
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ⁄ (U+2044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 ρ [kg⁄
+              m^3 ]	0.0382	0.1126
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.35 ρ [kg⁄m^
+                3 ]	0.0382	0.1126
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! Package inputenc Error: Unicode char γ (U+3B3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 γ
+        [-]	1.399	1.245
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char μ (U+3BC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 Pr=(μ
+           _e Cp_e)/K_e =0.4574
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char √ (U+221A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 (du_e)/dx=1/r_n  √
+                         (2(p_e-p_0 )/ρ_e )
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ρ (U+3C1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 (du_e)/dx=1/r_n  √(2(p_e-p_0 )/ρ
+                                        _e )
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char √ (U+221A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 ...laminar flows the recovery factor is r=√
+                                                  Pr
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char γ (U+3B3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 T_r=T_e (1+(γ
+                   _e-1)/2 √Pr 〖 M〗_e^2 )=2082 K
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char √ (U+221A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 T_r=T_e (1+(γ_e-1)/2 √
+                              Pr 〖 M〗_e^2 )=2082 K
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〖 (U+3016)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 T_r=T_e (1+(γ_e-1)/2 √Pr 〖
+                                     M〗_e^2 )=2082 K
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〗 (U+3017)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 T_r=T_e (1+(γ_e-1)/2 √Pr 〖 M〗
+                                         _e^2 )=2082 K
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ̇ (U+307)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 q ̇
+         =0.763〖Pr〗^0.6 (ρ_e μ_e )^(1⁄2) √((du_e)/dx)  Cp_e (T_r-T...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〖 (U+3016)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 q ̇=0.763〖
+                  Pr〗^0.6 (ρ_e μ_e )^(1⁄2) √((du_e)/dx)  Cp_e (T_r-T...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〗 (U+3017)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 q ̇=0.763〖Pr〗
+                       ^0.6 (ρ_e μ_e )^(1⁄2) √((du_e)/dx)  Cp_e (T_r-T...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ρ (U+3C1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 q ̇=0.763〖Pr〗^0.6 (ρ
+                               _e μ_e )^(1⁄2) √((du_e)/dx)  Cp_e (T_r-T...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char μ (U+3BC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 q ̇=0.763〖Pr〗^0.6 (ρ_e μ
+                                    _e )^(1⁄2) √((du_e)/dx)  Cp_e (T_r-T...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Double subscript.
+l.46 q ̇=0.763〖Pr〗^0.6 (ρ_e μ_
+                                     e )^(1⁄2) √((du_e)/dx)  Cp_e (T_r-T...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+
+! Package inputenc Error: Unicode char ⁄ (U+2044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 q ̇=0.763〖Pr〗^0.6 (ρ_e μ_e )^(1⁄
+                                              2) √((du_e)/dx)  Cp_e (T_r-T...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char √ (U+221A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 ...0.763〖Pr〗^0.6 (ρ_e μ_e )^(1⁄2) √
+                                                  ((du_e)/dx)  Cp_e (T_r-T_w )
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〖 (U+3016)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 (q=0.57〖
+               Pr〗^0.6 (ρ_e μ_e )^(1⁄2) √((du_e)/dx)  Cp_e (T_r-T_w ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〗 (U+3017)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 (q=0.57〖Pr〗
+                    ^0.6 (ρ_e μ_e )^(1⁄2) √((du_e)/dx)  Cp_e (T_r-T_w ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ρ (U+3C1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 (q=0.57〖Pr〗^0.6 (ρ
+                            _e μ_e )^(1⁄2) √((du_e)/dx)  Cp_e (T_r-T_w ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char μ (U+3BC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 (q=0.57〖Pr〗^0.6 (ρ_e μ
+                                 _e )^(1⁄2) √((du_e)/dx)  Cp_e (T_r-T_w ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Double subscript.
+l.49 (q=0.57〖Pr〗^0.6 (ρ_e μ_
+                                  e )^(1⁄2) √((du_e)/dx)  Cp_e (T_r-T_w ...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+
+! Package inputenc Error: Unicode char ⁄ (U+2044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 (q=0.57〖Pr〗^0.6 (ρ_e μ_e )^(1⁄
+                                           2) √((du_e)/dx)  Cp_e (T_r-T_w ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char √ (U+221A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 (q=0.57〖Pr〗^0.6 (ρ_e μ_e )^(1⁄2) √
+                                                 ((du_e)/dx)  Cp_e (T_r-T_w ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ̇ (U+307)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 ...⁄2) √((du_e)/dx)  Cp_e (T_r-T_w ) ) ̇
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ̇ (U+307)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 q ̇
+         _rad=σ_s (ϵ_w T_w^4-T_0^4 )
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char σ (U+3C3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 q ̇_rad=σ
+                _s (ϵ_w T_w^4-T_0^4 )
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ϵ (U+3F5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 q ̇_rad=σ_s (ϵ
+                      _w T_w^4-T_0^4 )
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ̇ (U+307)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 Steady state solution is reached when q ̇
+                                               =q ̇_rad
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ̇ (U+307)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 ...y state solution is reached when q ̇=q ̇
+                                                  _rad
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ∙ (U+2219)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 Nose radius (r_n )  [m]	1∙
+                                 〖10〗^(-3)*	1.27∙〖10〗^(-2)
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〖 (U+3016)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 Nose radius (r_n )  [m]	1∙〖
+                                    10〗^(-3)*	1.27∙〖10〗^(-2)
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〗 (U+3017)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 Nose radius (r_n )  [m]	1∙〖10〗
+                                         ^(-3)*	1.27∙〖10〗^(-2)
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ∙ (U+2219)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 ...ius (r_n )  [m]	1∙〖10〗^(-3)*	1.27∙
+                                                  〖10〗^(-2)
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〖 (U+3016)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 ... (r_n )  [m]	1∙〖10〗^(-3)*	1.27∙〖
+                                                  10〗^(-2)
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〗 (U+3017)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 ... )  [m]	1∙〖10〗^(-3)*	1.27∙〖10〗
+                                                  ^(-2)
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ϵ (U+3F5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 Emissivity (ϵ
+                   )  [-]	0.225	0.89
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.62 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (450.20432pt too wide) in paragraph at lines 30--62
+\OT1/cmr/m/n/10.95 [kgm$[]]0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 03820\OML/c
+mm/m/it/10.95 :\OT1/cmr/m/n/10.95 1126[\OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 
+]1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 3991\OML/cmm/m/it/10.95 :\OT1/cmr/m/n
+/10.95 245\OML/cmm/m/it/10.95 Table\OT1/cmr/m/n/10.95 [1]\OML/cmm/m/it/10.95 ; 
+propertiesoftheairbeforeandaftertheshockPropertiesaftertheshockallowustocalcula
+tethePrandtlnumberatthatlocationPr \OT1/cmr/m/n/10.95 =
+ []
+
+
+Overfull \hbox (160.09549pt too wide) in paragraph at lines 30--62
+\OT1/cmr/m/n/10.95 ([]\OML/cmm/m/it/10.95 Cp[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it
+/10.95 =K[] \OT1/cmr/m/n/10.95 = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 4574\
+OML/cmm/m/it/10.95 Assumingthattheboundarylayerremainslaminar; asimilaritysolut
+ionexists:\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 du[]\OT1/cmr/m/n/10.95 )\OML/
+cmm/m/it/10.95 =dx \OT1/cmr/m/n/10.95 =
+ []
+
+
+Overfull \hbox (193.18237pt too wide) in paragraph at lines 30--62
+\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 =r[]\OT1/cmr/m/n/10.95 (2(\OML/cmm/m/it
+/10.95 p[] \OMS/cmsy/m/n/10.95   \OML/cmm/m/it/10.95 p[]\OT1/cmr/m/n/10.95 )\OM
+L/cmm/m/it/10.95 =[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 Therecoverytemperat
+uredependsonthePrandtlnumber:Forlaminarflowstherecoveryfactorisr \OT1/cmr/m/n/1
+0.95 =
+ []
+
+
+Overfull \hbox (255.59319pt too wide) in paragraph at lines 30--62
+\OML/cmm/m/it/10.95 PrT[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 T[]\OT1/cmr/
+m/n/10.95 (1 + ([]\OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 1)\OML/cmm/m/it/10.95
+ =\OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 PrM[]\OT1/cmr/m/n/10.95 ) = 2082\OML/
+cmm/m/it/10.95 KConvectiveheatfluxontheinletconetipTheshapeofthebluntconeisappr
+oximatedtoasemi \OMS/cmsy/m/n/10.95  
+ []
+
+
+Overfull \hbox (479.50406pt too wide) in paragraph at lines 30--62
+\OML/cmm/m/it/10.95 T[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 Convectiveheatfl
+uxonthewingleadingedgeTheleadingedgeofthewinghasacylindricalshapewithanoseradiu
+sequaltohalfofthethicknessofthewing:Theheatfluxisgivenby \OT1/cmr/m/n/10.95 :
+ []
+
+
+Overfull \hbox (232.7619pt too wide) in paragraph at lines 30--62
+\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 q \OT1/cmr/m/n/10.95 = 0\OML/cmm/m/it/1
+0.95 :\OT1/cmr/m/n/10.95 57\OML/cmm/m/it/10.95 Pr[]:\OT1/cmr/m/n/10.95 6([][])[
+]12)((\OML/cmm/m/it/10.95 du[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 =dx\OT1/c
+mr/m/n/10.95 )\OML/cmm/m/it/10.95 Cp[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 T
+[] \OMS/cmsy/m/n/10.95   \OML/cmm/m/it/10.95 T[]\OT1/cmr/m/n/10.95 ))\OML/cmm/m
+/it/10.95 RadiationheatfluxTheradiationheatfluxhasbeencalculatedwiththeStefan \
+OMS/cmsy/m/n/10.95  
+ []
+
+
+Overfull \hbox (11.15167pt too wide) in paragraph at lines 30--62
+\OML/cmm/m/it/10.95 Boltzmanequation:q[]ad \OT1/cmr/m/n/10.95 =[] ([]\OML/cmm/m
+/it/10.95 T[] \OMS/cmsy/m/n/10.95   \OML/cmm/m/it/10.95 T[]\OT1/cmr/m/n/10.95 )
+\OML/cmm/m/it/10.95 Steadystatesolutionisreachedwhenq \OT1/cmr/m/n/10.95 =
+ []
+
+
+Overfull \hbox (744.66862pt too wide) in paragraph at lines 30--62
+\OT1/cmr/m/n/10.95 2)\OML/cmm/m/it/10.95 Temperature\OT1/cmr/m/n/10.95 (\OML/cm
+m/m/it/10.95 T\OT1/cmr/m/n/10.95 )[\OML/cmm/m/it/10.95 K\OT1/cmr/m/n/10.95 ]196
+21435\OML/cmm/m/it/10.95 MaterialTantalumNichrome\OT1/cmr/m/n/10.95 (80\OML/cmm
+/m/it/10.95 Maximumoperatingtemperature\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 
+K\OT1/cmr/m/n/10.95 ]32031573\OML/cmm/m/it/10.95 Emissivity\OT1/cmr/m/n/10.95 (
+)[\OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 ]0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/1
+0.95 2250\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 89\OML/cmm/m/it/10.95 Table\OT
+1/cmr/m/n/10.95 [2]\OML/cmm/m/it/10.95 ; relevantinformationoftheinletconetipan
+dwingleadingedgeregardingheattransfer \OMS/cmsy/m/n/10.95 
+ []
+
+
+Overfull \hbox (2228.92638pt too wide) in paragraph at lines 30--62
+\OML/cmm/m/it/10.95 Thisvaluehasbeenguessedandbasedonthemanufacturingtolerancei
+tmaychangesignificantly:Ontheonehand; abiggernoseradiuswilldecreasethetemperatu
+reoftheconetipbutitwilldecreasetheperformanceoftheinletaddingmoredrag:Ontheothe
+rhand; asmallernoseradiuswillbebeneficialfortheinletperformancebutitwillincreas
+ethetemperatureoftheinletcone:Thisvaluemustbesmallenoughnottoaffectsignificantl
+ytheinletperformancebutbigenoughtobemanufacturedandgetatemperaturethatliesinsid
+etheoperatingrangeofthematerial:$ 
+ []
+
+
+! Package inputenc Error: Unicode char α (U+3B1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 ...blem assuming that the angle of attack (α
+                                                  ) is zero. In reality the ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ⃗ (U+20D7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 ... of the flow can be simplified to (v ) ⃗
+                                                  =(u,0,0)
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.70 Re_
+        x=(ρ u x)/μ	If   Re_x<500,000→Laminar boundary layer
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! Package inputenc Error: Unicode char ρ (U+3C1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 Re_x=(ρ
+              u x)/μ	If   Re_x<500,000→Laminar boundary layer
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char μ (U+3BC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 Re_x=(ρ u x)/μ
+                     	If   Re_x<500,000→Laminar boundary layer
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char → (U+2192)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 Re_x=(ρ u x)/μ	If   Re_x<500,000→
+                                          Laminar boundary layer
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char → (U+2192)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71 	If   Re_x>500,000→
+                          Turbulent boundary layer
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.72 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[8]
+
+! Package inputenc Error: Unicode char μ (U+3BC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.74 Pr=μ
+          Cp/K
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char √ (U+221A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 r=√
+          Pr      for laminar B.L.	r=〖Pr〗^(1⁄3)      for turbulent B.L.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〖 (U+3016)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 r=√Pr      for laminar B.L.	r=〖
+                                        Pr〗^(1⁄3)      for turbulent B.L.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〗 (U+3017)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 r=√Pr      for laminar B.L.	r=〖Pr〗
+                                             ^(1⁄3)      for turbulent B.L.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.76 r=√Pr      for laminar B.L.	r=〖Pr〗^
+                                              (1⁄3)      for turbulent B.L.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! Package inputenc Error: Unicode char ⁄ (U+2044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 ...�Pr      for laminar B.L.	r=〖Pr〗^(1⁄
+                                                  3)      for turbulent B.L.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.77 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.79 Nu_
+        x=(h_g x)/K
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! Package inputenc Error: Unicode char √ (U+221A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 Nu_x=0.332√
+                  (Re_x ) 〖Pr〗^(1⁄3)	For laminar flows
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〖 (U+3016)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 Nu_x=0.332√(Re_x ) 〖
+                             Pr〗^(1⁄3)	For laminar flows
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〗 (U+3017)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 Nu_x=0.332√(Re_x ) 〖Pr〗
+                                  ^(1⁄3)	For laminar flows
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ⁄ (U+2044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 Nu_x=0.332√(Re_x ) 〖Pr〗^(1⁄
+                                        3)	For laminar flows
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〖 (U+3016)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.81 Nu_x=0.0296(Re_x )^0.8 〖
+                               Pr〗^(1⁄3)	For turbulent flows
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char 〗 (U+3017)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.81 Nu_x=0.0296(Re_x )^0.8 〖Pr〗
+                                    ^(1⁄3)	For turbulent flows
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ⁄ (U+2044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.81 Nu_x=0.0296(Re_x )^0.8 〖Pr〗^(1⁄
+                                          3)	For turbulent flows
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.82 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (46.21375pt too wide) in paragraph at lines 78--82
+\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 332(\OML/cmm/m/it/1
+0.95 Re[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 Pr[]\OT1/cmr/m/n/10.95 13)\OML
+/cmm/m/it/10.95 ForlaminarflowsNu[] \OT1/cmr/m/n/10.95 = 0\OML/cmm/m/it/10.95 :
+\OT1/cmr/m/n/10.95 0296(\OML/cmm/m/it/10.95 Re[]\OT1/cmr/m/n/10.95 )[]\OML/cmm/
+m/it/10.95 :\OT1/cmr/m/n/10.95 8\OML/cmm/m/it/10.95 Pr[]\OT1/cmr/m/n/10.95 13)\
+OML/cmm/m/it/10.95 Forturbulentflows$ 
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.83 ...e convective heat transfer coefficient (h_
+                                                  g )
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! Package inputenc Error: Unicode char ̇ (U+307)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86 The convective heat flux is q ̇
+                                     =h_g (T_r-T_w )
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ̇ (U+307)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.87 ...als the heat inflow due to convection q ̇
+                                                  =q ̇_rad
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char ̇ (U+307)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.87 ...he heat inflow due to convection q ̇=q ̇
+                                                  _rad
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.89 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (105.67899pt too wide) in paragraph at lines 83--89
+\OT1/cmr/m/n/10.95 the con-vec-tive heat trans-fer co-ef-fi-cient (h$[])\OML/cm
+m/m/it/10.95 h[] \OT1/cmr/m/n/10.95 = (\OML/cmm/m/it/10.95 KNu[]\OT1/cmr/m/n/10
+.95 )\OML/cmm/m/it/10.95 =xNotethatthisanalysisisnotvalidforx \OT1/cmr/m/n/10.9
+5 =
+ []
+
+
+Overfull \hbox (28.05438pt too wide) in paragraph at lines 83--89
+\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 wheretheleadingedgeislocated\OT1/cmr/m/
+n/10.95 (\OML/cmm/m/it/10.95 h[]isinfinitethere\OT1/cmr/m/n/10.95 )\OML/cmm/m/i
+t/10.95 :Theconvectiveheatfluxisq \OT1/cmr/m/n/10.95 =
+ []
+
+
+Overfull \hbox (161.66362pt too wide) in paragraph at lines 83--89
+\OML/cmm/m/it/10.95 h[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 T[] \OMS/cmsy/m/
+n/10.95   \OML/cmm/m/it/10.95 T[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 Steady
+stateisreachedwhentheheatdissipatedbyradiationequalstheheatinflowduetoconvectio
+nq \OT1/cmr/m/n/10.95 =
+ []
+
+
+Overfull \hbox (302.85324pt too wide) in paragraph at lines 83--89
+\OML/cmm/m/it/10.95 q[]adInordertogetthetemperaturecontourofthewing; thewalltem
+peratureofthewinghasbeencalculatedinnumerouslocationsalongthewing:$ 
+ []
+
+) (turbo.tex [9])) (results.tex) (conclusions.tex)
 No file main.bbl.
-(appendix.tex) [9] (main.aux) ) 
+(appendix.tex) [10] [11] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 2153 strings out of 493335
- 24955 string characters out of 3139253
- 89738 words of memory out of 3000000
- 5636 multiletter control sequences out of 15000+200000
+ 2167 strings out of 493335
+ 25047 string characters out of 3139253
+ 93738 words of memory out of 3000000
+ 5650 multiletter control sequences out of 15000+200000
  11352 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  27i,6n,24p,1814b,191s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on main.pdf (10 pages, 108576 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (12 pages, 158509 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
+ 77 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -19,7 +19,10 @@
 \contentsline {subsection}{\numberline {3.7}Cooling}{6}
 \contentsline {subsubsection}{\numberline {3.7.1}Combustor [Cameron Ellis]}{6}
 \contentsline {subsubsection}{\numberline {3.7.2}Nozzle [Gabriel Diez]}{7}
-\contentsline {subsection}{\numberline {3.8}Turbopump and Tank Sizing [Drew Sherman]}{8}
-\contentsline {section}{\numberline {4}Results}{9}
-\contentsline {section}{\numberline {5}Conclusions}{9}
-\contentsline {section}{\numberline {6}Appendix}{9}
+\contentsline {subsubsection}{\numberline {3.7.3}Wings and Leading Edges [Alberto Marin Cebrian]}{8}
+\contentsline {paragraph}{Inlet Cone Tip and Wing Leading Edges}{8}
+\contentsline {paragraph}{Wing Surface Temperature}{8}
+\contentsline {subsection}{\numberline {3.8}Turbopump and Tank Sizing [Drew Sherman]}{9}
+\contentsline {section}{\numberline {4}Results}{11}
+\contentsline {section}{\numberline {5}Conclusions}{11}
+\contentsline {section}{\numberline {6}Appendix}{11}
