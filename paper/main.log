@@ -1,12 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.10)  15 DEC 2017 09:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 DEC 2017 10:58
 entering extended mode
-**./main.tex
-(main.tex
-LaTeX2e <2016/03/31> patch level 1
-Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -21,20 +23,20 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -246,6 +248,8 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+0219 (decimal 537)
    defining Unicode char U+021A (decimal 538)
    defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0232 (decimal 562)
+   defining Unicode char U+0233 (decimal 563)
    defining Unicode char U+1E02 (decimal 7682)
    defining Unicode char U+1E03 (decimal 7683)
    defining Unicode char U+200C (decimal 8204)
@@ -266,12 +270,14 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+2039 (decimal 8249)
    defining Unicode char U+203A (decimal 8250)
    defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+1E20 (decimal 7712)
+   defining Unicode char U+1E21 (decimal 7713)
 )
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -311,8 +317,8 @@ File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -335,41 +341,41 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2016/03/10 v2.15b AMS math features
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
 \ex@=\dimen103
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen104
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count87
-LaTeX Info: Redefining \frac on input line 199.
+LaTeX Info: Redefining \frac on input line 213.
 \uproot@=\count88
 \leftroot@=\count89
-LaTeX Info: Redefining \overline on input line 297.
+LaTeX Info: Redefining \overline on input line 375.
 \classnum@=\count90
 \DOTSCASE@=\count91
-LaTeX Info: Redefining \ldots on input line 394.
-LaTeX Info: Redefining \dots on input line 397.
-LaTeX Info: Redefining \cdots on input line 518.
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count92
 \c@MaxMatrixCols=\count93
 \dotsspace@=\muskip10
@@ -390,23 +396,23 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2739.
-LaTeX Info: Redefining \] on input line 2740.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(C:\Users\tsatter\AppData\Roaming\MiKTeX\2.9\tex\latex\blindtext\blindtext.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/blindtext/blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 \c@blindtext=\count99
@@ -428,21 +434,14 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@pangramcount=\count115
 \c@blind@pangrammax=\count116
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2016/04/23 3.9r The Babel package
+(/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2017/05/19 3.10 The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\tsatter\AppData\Roaming\MiKTeX\2.9\tex\latex\arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
-Language: english 2012/08/20 v3.3p English support from the babel system
+(/usr/local/texlive/2017/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/01/24 v3.3q English support from the babel system
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2016/04/23 3.9r Babel common definitions
+(/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2017/05/19 3.10 Babel common definitions
 \babel@savecnt=\count117
 \U@D=\dimen112
 )
@@ -450,20 +449,20 @@ File: babel.def 2016/04/23 3.9r Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(C:\Users\tsatter\AppData\Roaming\MiKTeX\2.9\tex\latex\tocbibind\tocbibind.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tocbibind/tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has section divisions on input line 50.
 
 
 Package tocbibind Note: Using section or other style headings.
 
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks21
 \verbatim@line=\toks22
 \verbatim@in@stream=\read1
 )
-(C:\Users\tsatter\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen113
 \WF@size=\dimen114
 \c@WF@wrappedlines=\count118
@@ -471,21 +470,21 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \WF@everypar=\toks23
 Package: wrapfig 2003/01/31  v 3.6
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks24
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count119
@@ -500,8 +499,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen121
 \Gm@layoutvoffset=\dimen122
 \Gm@dimlist=\toks25
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+)
 
 Package geometry Warning: Over-specification in `h'-direction.
     `width' (483.69684pt) is ignored.
@@ -510,7 +508,7 @@ Package geometry Warning: Over-specification in `h'-direction.
 Package geometry Warning: Over-specification in `v'-direction.
     `height' (731.23582pt) is ignored.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count122
 \float@exts=\toks26
@@ -518,34 +516,35 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks27
 \@floatcapt=\box30
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2016/06/02 v1.0s Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
-File: pdftex.def 2016/06/17 v0.06h Graphics/color for pdfTeX
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count123
 ))
 \Gin@req@height=\dimen123
 \Gin@req@width=\dimen124
-) (main.aux)
+)
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
@@ -595,7 +594,7 @@ LaTeX Font Info:    ... okay on input line 46.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(C:\Users\tsatter\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count124
 \scratchdimen=\dimen125
@@ -608,11 +607,11 @@ LaTeX Font Info:    ... okay on input line 46.
 \MPnumerator=\count128
 \makeMPintoPDFobject=\count129
 \everyMPtoPDFconversion=\toks29
-) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -621,22 +620,22 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -649,175 +648,173 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Font Info:    Try loading font information for U+msa on input line 48.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 48.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/tsatter/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (main.toc
-)
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./main
+.toc)
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [1]
-(abstract.tex) (introduction.tex) (design.tex (designcontraints.tex)
-(vehicleTraj.tex <img/altVMach.jpg, id=13, 562.1pt x 421.575pt>
-File: img/altVMach.jpg Graphic file (type jpg)
 
-<use img/altVMach.jpg>
-Package pdftex.def Info: img/altVMach.jpg used on input line 6.
-(pdftex.def)             Requested size: 290.22107pt x 217.66354pt.
- [2] <img/velVMach.jpg, id=17, 562.1pt x 421.575pt>
-File: img/velVMach.jpg Graphic file (type jpg)
+[1] (./abstract.tex <img/totalIsoView.png, id=14, 1536.74126pt x 453.695pt>
+File: img/totalIsoView.png Graphic file (type png)
 
-<use img/velVMach.jpg>
-Package pdftex.def Info: img/velVMach.jpg used on input line 14.
-(pdftex.def)             Requested size: 290.22107pt x 217.66354pt.
-) (aeroPerformance.tex
-Overfull \hbox (0.52652pt too wide) in paragraph at lines 3--4
- \OT1/cmr/bx/n/10.95 Aero-dy-namic Ref-er-ence Area[]
- []
+<use img/totalIsoView.png>
+Package pdftex.def Info: img/totalIsoView.png used on input line 6.
+(pdftex.def)             Requested size: 483.69687pt x 142.80391pt.
+) (./introduction.tex
 
+LaTeX Warning: Citation `wang' on page 2 undefined on input line 2.
 
-Overfull \hbox (48.37016pt too wide) detected at line 8
-\OML/cmm/m/it/10.95 S \OT1/cmr/m/n/10.95 = ([] + []) \OMS/cmsy/m/n/10.95  []
- []
-
-<img/CdVMach.jpg, id=18, 562.1pt x 421.575pt>
+) (./design.tex (./designcontraints.tex) (./vehicleTraj.tex)
+(./aeroPerformance.tex [2 <./img/totalIsoView.png>]
+<img/CdVMach.jpg, id=20, 562.1pt x 421.575pt>
 File: img/CdVMach.jpg Graphic file (type jpg)
  <use img/CdVMach.jpg>
-Package pdftex.def Info: img/CdVMach.jpg used on input line 23.
+Package pdftex.def Info: img/CdVMach.jpg used on input line 25.
 (pdftex.def)             Requested size: 290.22107pt x 217.66354pt.
- [3 <./img/altVMach.jpg> <./img/velVMach.jpg>]
-Underfull \hbox (badness 3009) in paragraph at lines 43--45
-[] \OT1/cmr/bx/n/10.95 Thrust Re-quired[] \OT1/cmr/m/n/10.95 The drag
- []
-
-
-Underfull \hbox (badness 1527) in paragraph at lines 43--45
-\OT1/cmr/m/n/10.95 mis-sion the thrust re-quired is
- []
-
-
-Underfull \hbox (badness 5985) in paragraph at lines 52--53
- \OT1/cmr/bx/n/10.95 Lift De-ter-mi-na-tion[] \OT1/cmr/m/n/10.95 In the
- []
-
-<img/ClCdVMach.jpg, id=26, 562.1pt x 421.575pt>
+ [3 <./img/CdVMach.jpg>] <img/ClCdVMach.jpg, id=28, 562.1pt x 421.575pt>
 File: img/ClCdVMach.jpg Graphic file (type jpg)
- <use img/ClCdVMach.jpg>
-Package pdftex.def Info: img/ClCdVMach.jpg used on input line 69.
+
+<use img/ClCdVMach.jpg>
+Package pdftex.def Info: img/ClCdVMach.jpg used on input line 71.
 (pdftex.def)             Requested size: 290.22107pt x 217.66354pt.
-)
-(inletSystem.tex [4 <./img/CdVMach.jpg> <./img/ClCdVMach.jpg>]
-<img/coneVari.png, id=30, 368.1253pt x 148.30406pt>
+) (./inletSystem.tex
+<img/coneVari.png, id=29, 368.1253pt x 148.30406pt>
 File: img/coneVari.png Graphic file (type png)
  <use img/coneVari.png>
 Package pdftex.def Info: img/coneVari.png used on input line 9.
 (pdftex.def)             Requested size: 290.22107pt x 116.92809pt.
-)
-(combustor.tex [5 <./img/coneVari.png>]
-<img/combustorIsoView.png, id=36, 642.14906pt x 344.78813pt>
+
+[4 <./img/ClCdVMach.jpg>]) (./combustor.tex [5 <./img/coneVari.png>]
+<img/combustorIsoView.png, id=37, 642.14906pt x 344.78813pt>
 File: img/combustorIsoView.png Graphic file (type png)
 
 <use img/combustorIsoView.png>
 Package pdftex.def Info: img/combustorIsoView.png used on input line 30.
 (pdftex.def)             Requested size: 338.58632pt x 181.80037pt.
- [6 <./img/combustorIsoView.png>]) (nozzle.tex
-<img/aerospikeContour.png, id=42, 419.5675pt x 313.17pt>
+
+<img/nozzleCombSection.png, id=38, 271.7352pt x 186.4566pt>
+File: img/nozzleCombSection.png Graphic file (type png)
+
+<use img/nozzleCombSection.png>
+Package pdftex.def Info: img/nozzleCombSection.png used on input line 60.
+(pdftex.def)             Requested size: 338.58632pt x 232.33899pt.
+ [6 <./img/combustorIsoView.png>]) (./nozzle.tex <img/aerospikeContour.png, id=
+44, 419.5675pt x 313.17pt>
 File: img/aerospikeContour.png Graphic file (type png)
 
 <use img/aerospikeContour.png>
 Package pdftex.def Info: img/aerospikeContour.png used on input line 7.
 (pdftex.def)             Requested size: 290.22107pt x 216.62273pt.
-
-<img/aerospikePressure.png, id=43, 446.66875pt x 334.24875pt>
+ [7 <./img/nozzleCombSection.png> <./img/aerospikeContour.png>] <img/aerospikeP
+ressure.png, id=50, 446.66875pt x 334.24875pt>
 File: img/aerospikePressure.png Graphic file (type png)
 
 <use img/aerospikePressure.png>
 Package pdftex.def Info: img/aerospikePressure.png used on input line 17.
 (pdftex.def)             Requested size: 290.22107pt x 217.1775pt.
- [7 <./img/aerospikeContour.png>]
-<img/nozzleIsoView.png, id=48, 341.275pt x 288.07625pt>
-File: img/nozzleIsoView.png Graphic file (type png)
-
-<use img/nozzleIsoView.png>
-Package pdftex.def Info: img/nozzleIsoView.png used on input line 25.
-(pdftex.def)             Requested size: 241.84843pt x 204.15312pt.
-) (heatTransfer.tex (coolingCombustor.tex [8 <./img/aerospikePressure.png> <./i
-mg/nozzleIsoView.png>]
-<img/combustorWallTemps.png, id=56, 402.50375pt x 392.46625pt>
+) (./heatTransfer.tex (./coolingCombustor.tex
+[8 <./img/aerospikePressure.png>]
+<img/combustorWallTemps.png, id=58, 402.50375pt x 392.46625pt>
 File: img/combustorWallTemps.png Graphic file (type png)
 
 <use img/combustorWallTemps.png>
 Package pdftex.def Info: img/combustorWallTemps.png used on input line 21.
 (pdftex.def)             Requested size: 290.22107pt x 282.98268pt.
- [9 <./img/combustorWallTemps.png (PNG copy)>]
-<img/incoloyPlot.png, id=61, 330.23375pt x 299.1175pt>
-File: img/incoloyPlot.png Graphic file (type png)
-
-<use img/incoloyPlot.png>
-Package pdftex.def Info: img/incoloyPlot.png used on input line 37.
-(pdftex.def)             Requested size: 290.22107pt x 262.8819pt.
-)
-
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 4.
-
-
-(wingHeating.tex [10 <./img/incoloyPlot.png (PNG copy)>] [11])) (turbo.tex
-[12] <img/turboSchematic.png, id=72, 770.88pt x 239.89626pt>
+) [9 <./img/combustorWallTemps.png (PNG copy)>] (./wingHeating.tex [10])) (./tu
+rbo.tex [11]
+<img/turboSchematic.png, id=68, 770.88pt x 239.89626pt>
 File: img/turboSchematic.png Graphic file (type png)
 
 <use img/turboSchematic.png>
 Package pdftex.def Info: img/turboSchematic.png used on input line 21.
 (pdftex.def)             Requested size: 483.69687pt x 150.52412pt.
-
-<img/turboPressureVMdot.png, id=73, 422.32782pt x 316.18124pt>
-File: img/turboPressureVMdot.png Graphic file (type png)
-
-<use img/turboPressureVMdot.png>
-Package pdftex.def Info: img/turboPressureVMdot.png used on input line 30.
-(pdftex.def)             Requested size: 290.22107pt x 217.2824pt.
- [13 <./img/turboSchematic.png>])) (results.tex) (conclusions.tex) [14 <./img/t
-urboPressureVMdot.png (PNG copy)>] [15]
-(main.bbl
+ [12 <./img/turboSchematic.png>])
+(./massBreakdown.tex)) (./results.tex) (./conclusions.tex [13]) [14]
+(./main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 39--40
 []\OT1/cmr/m/n/10.95 http://www.specialmetals.com/assets/smc/documents/alloys/i
 ncoloy/incoloy-alloys-800h-
  []
 
-) [16] (appendix.tex) [17] (main.aux) ) 
+) [15] (./appendix.tex <img/altVMach.jpg, id=84, 562.1pt x 421.575pt>
+File: img/altVMach.jpg Graphic file (type jpg)
+
+<use img/altVMach.jpg>
+Package pdftex.def Info: img/altVMach.jpg used on input line 5.
+(pdftex.def)             Requested size: 290.22107pt x 217.66354pt.
+ <img/velVMach.jpg, id=85, 562.1pt x 421.575pt>
+File: img/velVMach.jpg Graphic file (type jpg)
+
+<use img/velVMach.jpg>
+Package pdftex.def Info: img/velVMach.jpg used on input line 13.
+(pdftex.def)             Requested size: 290.22107pt x 217.66354pt.
+ <img/incoloyPlot.png, id=86, 330.23375pt x 299.1175pt>
+File: img/incoloyPlot.png Graphic file (type png)
+
+<use img/incoloyPlot.png>
+Package pdftex.def Info: img/incoloyPlot.png used on input line 21.
+(pdftex.def)             Requested size: 290.22107pt x 262.8819pt.
+ [16 <./img/velVMach.jpg> <./img/altVMach.jpg>]
+<img/nozzleIsoView.png, id=90, 341.275pt x 288.07625pt>
+File: img/nozzleIsoView.png Graphic file (type png)
+
+<use img/nozzleIsoView.png>
+Package pdftex.def Info: img/nozzleIsoView.png used on input line 29.
+(pdftex.def)             Requested size: 241.84843pt x 204.15312pt.
+
+<img/turboPressureVMdot.png, id=91, 422.32782pt x 316.18124pt>
+File: img/turboPressureVMdot.png Graphic file (type png)
+
+<use img/turboPressureVMdot.png>
+Package pdftex.def Info: img/turboPressureVMdot.png used on input line 37.
+(pdftex.def)             Requested size: 290.22107pt x 217.2824pt.
+ [17 <./img/incoloyPlot.png (PNG copy)> <./img/nozzleIsoView.png>]) [18 <./img/
+turboPressureVMdot.png (PNG copy)>] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4152 strings out of 493335
- 54958 string characters out of 3139253
- 132905 words of memory out of 3000000
- 7524 multiletter control sequences out of 15000+200000
- 11698 words of font info for 44 fonts, out of 3000000 for 9000
+ 4210 strings out of 492995
+ 56465 string characters out of 6132704
+ 134166 words of memory out of 5000000
+ 7603 multiletter control sequences out of 15000+600000
+ 11698 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,17n,28p,1814b,266s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
-0.pfb>
-Output written on main.pdf (18 pages, 820236 bytes).
+ 39i,17n,28p,1880b,270s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (19 pages, 1097354 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
+ 142 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

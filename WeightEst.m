@@ -64,7 +64,7 @@ Avionics = 294;
 
 P_operating = 14.7;
 Volume_tank = 2257.8;
-tankWeight = (300*P_operating*Volume_tank)/(1*10^6);
+tankWeight = 3.2;
 
 
 isRho = 4506; % Density of titanium [kg/m^3]

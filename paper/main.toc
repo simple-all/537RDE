@@ -1,32 +1,34 @@
 \select@language {english}
 \contentsline {section}{\numberline {1}Abstract}{2}
 \contentsline {section}{\numberline {2}Introduction}{2}
-\contentsline {section}{\numberline {3}Design Methodology}{2}
-\contentsline {subsection}{\numberline {3.1}Mission Design and Constraints}{2}
-\contentsline {subsection}{\numberline {3.2}Vehicle Trajectory [Andy McClaskey]}{2}
+\contentsline {section}{\numberline {3}Design Methodology}{3}
+\contentsline {subsection}{\numberline {3.1}Mission Design and Constraints}{3}
+\contentsline {subsection}{\numberline {3.2}Vehicle Trajectory [Andy McClaskey]}{3}
 \contentsline {subsection}{\numberline {3.3}Aerodynamic Performance Analysis [Andy McClaskey]}{3}
 \contentsline {paragraph}{Aerodynamic Reference Area}{3}
 \contentsline {paragraph}{Drag Determination}{3}
 \contentsline {paragraph}{Thrust Required}{4}
 \contentsline {paragraph}{Lift Determination}{4}
 \contentsline {paragraph}{Lift over Drag}{4}
-\contentsline {subsection}{\numberline {3.4}Inlet, Isolator, and Compression Duct [Thomas Satterly]}{5}
-\contentsline {paragraph}{Inlet}{5}
+\contentsline {subsection}{\numberline {3.4}Inlet, Isolator, and Compression Duct [Thomas Satterly]}{4}
+\contentsline {paragraph}{Inlet}{4}
 \contentsline {paragraph}{Isolator}{5}
 \contentsline {paragraph}{Compression Duct}{5}
-\contentsline {subsection}{\numberline {3.5}Combustor [Thomas Satterly]}{6}
+\contentsline {subsection}{\numberline {3.5}Combustor [Thomas Satterly]}{5}
 \contentsline {subsection}{\numberline {3.6}Nozzle [Gabriel Diez]}{7}
 \contentsline {subsection}{\numberline {3.7}Heat Transfer}{8}
 \contentsline {subsubsection}{\numberline {3.7.1}Combustor [Cameron Ellis]}{8}
-\contentsline {subsubsection}{\numberline {3.7.2}Nozzle [Gabriel Diez]}{10}
+\contentsline {subsubsection}{\numberline {3.7.2}Nozzle [Gabriel Diez]}{9}
 \contentsline {subsubsection}{\numberline {3.7.3}Wings and Leading Edges [Alberto Marin Cebrian]}{10}
 \contentsline {paragraph}{Inlet Cone Tip and Wing Leading Edges}{10}
-\contentsline {paragraph}{Convective heat flux on the inlet cone tip}{11}
-\contentsline {paragraph}{Convective heat flux on the wing leading edge}{11}
-\contentsline {paragraph}{Radiation heat flux}{11}
+\contentsline {paragraph}{Convective heat flux on the inlet cone tip}{10}
+\contentsline {paragraph}{Convective heat flux on the wing leading edge}{10}
+\contentsline {paragraph}{Radiation heat flux}{10}
 \contentsline {paragraph}{Wing Surface Temperature}{11}
-\contentsline {subsection}{\numberline {3.8}Turbopump and Tank Sizing [Drew Sherman]}{12}
-\contentsline {section}{\numberline {4}Results}{15}
-\contentsline {section}{\numberline {5}Conclusions}{15}
-\contentsline {section}{References}{16}
-\contentsline {section}{\numberline {6}Appendix}{17}
+\contentsline {subsection}{\numberline {3.8}Turbopump and Tank Sizing [Drew Sherman]}{11}
+\contentsline {section}{\numberline {4}Mass Breakdown}{13}
+\contentsline {section}{\numberline {5}Results}{13}
+\contentsline {section}{\numberline {6}Conclusions}{13}
+\contentsline {section}{References}{15}
+\contentsline {section}{\numberline {7}Appendix A: Figures}{16}
+\contentsline {section}{\numberline {8}Appendix B: Equations}{18}
