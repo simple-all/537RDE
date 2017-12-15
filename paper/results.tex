@@ -1,6 +1,6 @@
 \section{Results}
 
- Performance parameters of the aircraft throughout the mission are listed on Table ( ). The final designed flight path begins with the GO1 accelerating the aircraft to Mach 5.5 and an altitude of 25.33 km. At that point the engines will ignite and initiate a 62.5 s acceleration period until the cruising Mach number of 6.5 is reached where it will maintain speed for 45 seconds. The combined acceleration and cruising phases produce a range of 197.15 km for this mission. The thrust and specific impulse were calculated for the duration of the mission and plotted on Figure \ref{fig:thrustIsp}. During the acceleration portion of the flight the equivalence ratio is highest in order to produce maximum thrust, leading to steadily increasing specific impulse. Once the aircraft reaches the cruising Mach number, the equivalence ratio is lowered so that the thrust can be balanced with the drag, which leads to a sudden drop in Isp. While the calculated mass of 296.3 is slightly above the 273 kg maximum of the GO1 launcher, the mass of the avionics components was roughly estimated and could not be fully designed. In application, the avionics and propulsion systems would be designed together so that each of their weights can be optimized in parallel. A cross section of the vehicle as well as flow conditions during cruising speed are displayed in Figure \ref{fig:totalCrossSection}.
+ Performance parameters of the aircraft throughout the mission are listed on Table \ref{tab:results}. The final designed flight path begins with the GO1 accelerating the aircraft to Mach 5.5 and an altitude of 25.33 km. At that point the engines will ignite and initiate a 62.5 s acceleration period until the cruising Mach number of 6.5 is reached where it will maintain speed for 45 seconds. The combined acceleration and cruising phases produce a range of 197.15 km for this mission. The thrust and specific impulse were calculated for the duration of the mission and plotted on Figure \ref{fig:thrustIsp}. During the acceleration portion of the flight the equivalence ratio is highest in order to produce maximum thrust, leading to steadily increasing specific impulse. Once the aircraft reaches the cruising Mach number, the equivalence ratio is lowered so that the thrust can be balanced with the drag, which leads to a sudden drop in Isp. While the calculated mass of 296.3 is slightly above the 273 kg maximum of the GO1 launcher, the mass of the avionics components was roughly estimated and could not be fully designed. In application, the avionics and propulsion systems would be designed together so that each of their weights can be optimized in parallel. A cross section of the vehicle as well as flow conditions during cruising speed are displayed in Figure \ref{fig:totalCrossSection}.
 
 \begin{center}
 \begin{tabular}{l c}
@@ -16,7 +16,10 @@ Fuel Weight (kg) & 21 \\
 Gross Weight (kg) & 296.3 \\
 L/D & 2
 \end{tabular}
+\captionof{table}{Performance Results}
+\label{tab:results}
 \end{center}
+
 
 \begin{figure}[H]
 \begin{center}
@@ -27,15 +30,18 @@ L/D & 2
 \end{figure}
 
 During cruise, flow will enter the diffusor at Mach 6.5 a static pressure and temperature of 2.4 kPa and 222 K, respectively. The conical diffusor will vary its lateral position such that \ang{5} half angle of the cone will produce an oblique shock that terminates at the cowl lip at the full range of Mach numbers for optimum pressure recovery. The oblique shock slows down the flow to Mach 5.17 and raises static pressure to 9.1 kPa. The flow then travels through an isolator. The isolator was designed to produce a pressure ratio based on the MilStd 5007D. Because of the higher combustor inlet Mach numbers RDE’s are capable of operating at, the exit Mach number of the isolator is 3.25 and the static pressure and temperature is 35.5 kPa and 593 K, respectively. The parameters to produce a stable rotating detonation wave within the combustor are highly dependent on the area of the burner. As a result, CEA calculations output an area that was smaller than the capture area of the isolator. A compression duct was then added to the design in order to guide the flow to the necessary area as well as raise the static pressure to 195.5 kPa. This isentropic compression raises the static pressure to 195.5 kPa and the static temperature to 1097 K.
-        	The ethylene fuel is pumped from the tanks within the center of the fuselage as well as the exterior of the fuselage through a regenerative heat exchanger that cools the combustor. In order to inject the ethylene into the combustor as a gas, it has to be pumped through the fuel system at a supercritical pressure so that it instantaneously vaporizes within the combustor. In order to achieve these high pressures, a gas generator system was added to the aircraft that decomposes H2O2 within a small catalyst bed and then drives a turbopump. Once the ethylene enters the combustor it mixes with the flow and forms a rotating detonation wave that leads to an average static pressure of 365.8 kPa and static temperature of 2417 K. The Mach 2.14 flow exiting the combustor then flows through an ablatively cooled aerospike nozzle that expands the gases to 14.4 kPa and a final exit Mach number of 2.85.
 
-\begin{figure}[H]
+\begin{wrapfigure}{r}{0.5\textwidth}
 \begin{center}
-\includegraphics[width=0.6\textwidth]{thrustIsp}
+\includegraphics[trim=1cm 1cm 1cm 2cm, width=0.5\textwidth]{thrustIsp}
 \caption{Thrust and Isp v. Time}
 \label{fig:thrustIsp}
 \end{center}
-\end{figure}
+\end{wrapfigure}
+
+        	The ethylene fuel is pumped from the tanks within the center of the fuselage as well as the exterior of the fuselage through a regenerative heat exchanger that cools the combustor. In order to inject the ethylene into the combustor as a gas, it has to be pumped through the fuel system at a supercritical pressure so that it instantaneously vaporizes within the combustor. In order to achieve these high pressures, a gas generator system was added to the aircraft that decomposes H2O2 within a small catalyst bed and then drives a turbopump. Once the ethylene enters the combustor it mixes with the flow and forms a rotating detonation wave that leads to an average static pressure of 365.8 kPa and static temperature of 2417 K. The Mach 2.14 flow exiting the combustor then flows through an ablatively cooled aerospike nozzle that expands the gases to 14.4 kPa and a final exit Mach number of 2.85.
+
+
 
 
 

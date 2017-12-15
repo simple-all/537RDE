@@ -26,11 +26,12 @@
 \contentsline {paragraph}{Wing Surface Temperature}{11}
 \contentsline {subsection}{\numberline {3.7}Turbopump and Tank Sizing [Drew Sherman]}{11}
 \contentsline {section}{\numberline {4}Mass Breakdown}{13}
-\contentsline {section}{\numberline {5}Results}{13}
+\contentsline {section}{\numberline {5}Results}{14}
 \contentsline {section}{\numberline {6}Conclusions}{15}
 \contentsline {section}{\numberline {7}References}{16}
-\contentsline {section}{\numberline {8}Appendix A: Figures}{17}
-\contentsline {section}{\numberline {9}Appendix B: Equations}{20}
-\contentsline {section}{\numberline {10}Appendix C: Air Properties}{21}
-\contentsline {section}{\numberline {11}Appendix D: Chapman-Jouguet Detonation Model}{23}
-\contentsline {section}{\numberline {12}Appendix E: Alternative RDE Analysis Model}{24}
+\contentsline {section}{\numberline {8}Appendix A: Figures}{18}
+\contentsline {section}{\numberline {9}Appendix B: Additional Equations}{21}
+\contentsline {section}{\numberline {10}Appendix C: RDE Performance Figures}{22}
+\contentsline {section}{\numberline {11}Appendix D: Air Properties}{25}
+\contentsline {section}{\numberline {12}Appendix E: Chapman-Jouguet Detonation Model}{27}
+\contentsline {section}{\numberline {13}Appendix F: Alternative RDE Analysis Model}{28}

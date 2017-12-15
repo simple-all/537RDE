@@ -21,6 +21,7 @@
   title     = {Liquid Rocket Engine Centrifugal Flow Turbopumps},
   publisher = {NASA SP-8109},
   year      = {1973},
+  editor    = {NASA},
   month     = dec,
 }
 
@@ -64,10 +65,10 @@
 }
 
 @Misc{inco,
-  author       = {Special Metals},
   title        = {Incoloy Alloy 800H \& 800HT},
   howpublished = {http://www.specialmetals.com/assets/smc/documents/alloys/incoloy/incoloy-alloys-800h-800ht.pdf},
   note         = {Accessed: 2017-12-15},
+  key          = {Special Metals},
 }
 
 @MastersThesis{imbaratto,
@@ -100,6 +101,36 @@
   journal = {Sperko Engineering},
   year    = {2000},
   month   = jun,
+}
+
+@Book{wang,
+  title     = {Aerospike Nozzle Contour Design and its Performance Validation},
+  publisher = {ACTA Astronautica},
+  year      = {2009},
+  author    = {Chang-Hui Want and Yu Lui and Li-Ze Qin},
+  month     = jan,
+}
+
+@Book{stechmann,
+  title     = {Performance Analysis},
+  publisher = {Purdue University},
+  year      = {2017},
+  author    = {David Stechmann},
+  note      = {Provided by Dr. Heister's AAE 53700 course materials},
+}
+
+@Misc{cea,
+  title        = {Chemical Equillibrium with Applications},
+  howpublished = {https://www.grc.nasa.gov/www/CEAWeb/},
+  note         = {Accessed on 2017-12-17},
+  key          = {NASA},
+}
+
+@Booklet{go1,
+  title = {GO1 Overview},
+  month = nov,
+  year  = {2017},
+  key   = {Generation Orbit Launch Services},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

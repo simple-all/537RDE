@@ -26,18 +26,19 @@ A.~Csomor and R.~Sutton.
 \newblock {\em Small, High-Pressure Liquid Hydrogen Turbopump}.
 \newblock Rockwell International, Canoga Park, CA, May 1977.
 
+\bibitem{go1}
+Go1 overview, November 2017.
+
 \bibitem{imbaratto}
 David~Michael Imbaratto.
 \newblock The interaction between throttling and thrust vectoring of an annular
   aerospike nozzle.
 \newblock mathesis, California Polytechnic State University, September 2009.
 
-\bibitem{inco}
-Special Metals.
-\newblock Incoloy alloy 800h \& 800ht.
-\newblock
-  http://www.specialmetals.com/assets/smc/documents/alloys/incoloy/incoloy-alloys-800h-800ht.pdf.
-\newblock Accessed: 2017-12-15.
+\bibitem{cea}
+Chemical equillibrium with applications.
+\newblock https://www.grc.nasa.gov/www/CEAWeb/.
+\newblock Accessed on 2017-12-17.
 
 \bibitem{turbo}
 NASA, editor.
@@ -49,11 +50,23 @@ Brent Ruttle, Jacob Stork, and Glenn Liston.
 \newblock {\em Generic Hypersonic Vehicle for Conceptual Analyses}.
 \newblock Air Force Research Lab, 2012.
 
+\bibitem{inco}
+Incoloy alloy 800h \& 800ht.
+\newblock
+  http://www.specialmetals.com/assets/smc/documents/alloys/incoloy/incoloy-alloys-800h-800ht.pdf.
+\newblock Accessed: 2017-12-15.
+
 \bibitem{asme}
 Walter~J. Sperko.
 \newblock Reduction of design margin (“safety factor”) in the asme boiler
   and pressure vessel code in the 1999 addenda.
 \newblock {\em Sperko Engineering}, June 2000.
+
+\bibitem{stechmann}
+David Stechmann.
+\newblock {\em Performance Analysis}.
+\newblock Purdue University, 2017.
+\newblock Provided by Dr. Heister's AAE 53700 course materials.
 
 \bibitem{tick}
 S.~J. Tick, G.~R. Huson, and R.~Griese.
@@ -65,5 +78,10 @@ S.~J. Tick, G.~R. Huson, and R.~Griese.
 P.~J. Waltrup and F.~S. Billig.
 \newblock {\em Structure of Shock Waves in Cylindrical Ducts}, volume~11.
 \newblock AIAA Journal, 1973.
+
+\bibitem{wang}
+Chang-Hui Want, Yu~Lui, and Li-Ze Qin.
+\newblock {\em Aerospike Nozzle Contour Design and its Performance Validation}.
+\newblock ACTA Astronautica, January 2009.
 
 \end{thebibliography}

@@ -1,17 +1,15 @@
 \subsection{Aerodynamic Performance Analysis [Andy McClaskey]}
 \paragraph{Aerodynamic Reference Area}
-The reference area needed for calculated lift and drag was determined by assuming a trapezoidal wing planform. The root and tip chord length were used as inputs to the area equation to calculate the wing planform area. The equation used for calculation total wing area is shown in Equation \ref{eqn:aeroRefArea}.
+The reference area needed for calculated lift and drag was determined by assuming a trapezoidal wing planform. The root and tip chord length were used as inputs to the area equation to calculate the wing planform area. The equation used for calculation total wing area is shown in Equation \ref{eqn:aeroRefArea}. The planform was optimized for a drag to help increase the lift to drag ratio later in the design.
 
 \begin{equation}
 \label{eqn:aeroRefArea}
 S = (\text{Root Chord} + \text{Tip Chord})*\frac{\text{Wing Span}}{2}
 \end{equation}
 
-The planform was optimized for a drag to help increase the lift to drag ratio later in the design
-
 \paragraph{Drag Determination}
 
-The Coefficient of Drag ($C_D$) was taken from the 1x scale Generic Hypersonic Vehicle \cite{ghv} for the angle of attack of zero. Once the coefficient of drag was known, the total drag could be calculated using Equation \ref{eqn:drag}. They dynamic pressure is known from the free stream conditions of the vehicle and the aero reference area is known from above. The Coefficient of Drag is plotted in Figure \ref{fig:CdVMach}.
+The Coefficient of Drag ($C_D$) was taken from the 1X scale Generic Hypersonic Vehicle for the angle of attack of zero \cite{ghv}. Once the coefficient of drag was known, the total drag could be calculated using Equation \ref{eqn:drag}. They dynamic pressure is known from the free stream conditions of the vehicle and the aero reference area is known from above. The Coefficient of Drag is plotted in Figure \ref{fig:CdVMach}.
 
 \begin{equation}
 \label{eqn:drag}

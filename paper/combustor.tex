@@ -1,7 +1,7 @@
 \subsection{Combustor [Thomas Satterly]}
-The chosen combustor was a gaseous ethylene fueled RDE. The sizing of the combustion chamber was based off of the Bykovskii \cite{bykovskii} guidelines and experimentally observed cell sizes for gaseous ethylene \cite{cellsize}. Chapman-Jouget detonation parameters were calculated using the NASA CEA program, and the RDE performance was analyzed using the model proposed by Stechmann (REF XXX). The mass flow rate, minimum pressure, and minimum temperature were varied and the design iterated, along with the inlet, isolator, and compression duct, until a reasonable flow path was found with acceptable performance. 
+The chosen combustor was a gaseous ethylene fueled RDE. The sizing of the combustion chamber was based off of the Bykovskii et. al.\cite{bykovskii} guidelines and experimentally observed cell sizes for gaseous ethylene \cite{cellsize}. Chapman-Jouget detonation parameters were calculated using the NASA CEA program \cite{cea}, and the RDE performance was analyzed using the model proposed by Stechmann \cite{stechmann}. The mass flow rate, minimum pressure, and minimum temperature were varied and the design iterated, along with the inlet, isolator, and compression duct, until a reasonable and unified flow path was found with acceptable performance. 
 
-From experimental data collected by Bull et. al. \cite{cellsize}, the approximate cell size of an ethylene-air mixture at 195 kPa is approximately 12.6 mm. From the guidelines given by Bykovskii in equations \ref{eqn:rdeH} through \ref{eqn:rdeGap}, the bounds on the RDE size can be calculated.
+From experimental data collected by Bull et. al. \cite{cellsize}, the approximate cell size of an ethylene-air mixture at 195 kPa is approximately 12.6 mm. From the guidelines given by Bykovskii in equations \ref{eqn:rdeH} through \ref{eqn:rdeGap}, the bounds on the RDE size can be calculated, where $a$ is the cell size, $d_c$ is the outer diameter, and $\Delta$ is the annulus gap.
 
 \begin{equation}
 h\cong(12\pm5)a
@@ -23,17 +23,17 @@ L_{min}\cong2h
 \label{eqn:rdeGap}
 \end{equation}
 
-    From these guidelines, the RDE outer diameter was chosen at 0.2035 m with an inner diameter of 0.16 m and a total length of 0.254 m. A CAD model of the combustor can be seen in figure \ref{fig:combustorIsoView}.
+    From these guidelines, the RDE outer diameter was chosen at 0.2035 m with an inner diameter of 0.16 m and a total length of 0.254 m. The RDE also employs regenerative cooling channels to ensure the combustor hardware does not melt during the mission. A CAD model of the combustor can be seen in Figure \ref{fig:combustorIsoView}.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=0.7\textwidth]{combustorIsoView}
+\includegraphics[trim = 0cm 0.5cm 0cm 1cm, width=0.6\textwidth]{combustorIsoView}
 \caption{Combustor Geometry}
 \label{fig:combustorIsoView}
 \end{center}
 \end{figure}
 
-    Using the Stechmann model, the RDE’s performance was analyzed across the flight conditions the vehicle would experience. During acceleration, an equivalence ratio of 1 was chosen to capitalize on performance while avoiding extreme temperatures. During cruise, the equivalence ratio was reduced to 0.58 in order to produce enough thrust for steady level flight. The performance characteristics of the RDE is shown in table EQ. Detailed plots of the predicted flow parameters between detonation fronts can be found in the appendix.
+    Using the Stechmann model \cite{stechmann}, the RDE’s performance was analyzed across the flight conditions the vehicle would experience. During acceleration, an equivalence ratio of 1 was chosen to capitalize on performance while avoiding extreme temperatures. During cruise, the equivalence ratio was reduced to 0.58 in order to produce enough thrust for steady level flight. The performance characteristics of the RDE is shown in table \ref{tab:combustor}.
 
 \begin{center}
 \begin{tabular}{l c c}
@@ -51,13 +51,17 @@ CJ Temperature Ratio & 2.93 - 2.84 & 2.54 \\
 Combustor Mach & 1.5 - 2.14 & 2.14 \\
 Entrance Pressure (kPa) & 250 - 195 & 195
 \end{tabular}
+\captionof{table}{Performance Results}
+\label{tab:combustor}
 \end{center}
+
+Figures illustrating the changing performance parameters between detonation fronts can be found in Appendix C.
 
     A major assumption made in this model is the ability for an RDE to be able to deep throttle from an equivalence ratio of 1 down to 0.58. Such a shift will affect the cell size and impose transients during throttling, of which neither effect has been studied in detail and remains an important question for the true capability of an RDE. A cross section view of the combustor can be seen in Figure \ref{fig:nozzleCombSection}
     
  \begin{figure}[H]
 \begin{center}
-\includegraphics[width=0.7\textwidth]{nozzleCombSection}
+\includegraphics[width=0.5\textwidth]{nozzleCombSection}
 \caption{Combustor and Nozzle Cross Section}
 \label{fig:nozzleCombSection}
 \end{center}
