@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.10)  14 DEC 2017 19:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.10)  14 DEC 2017 19:56
 entering extended mode
 **./main.tex
 (main.tex
@@ -603,30 +603,67 @@ Package pdftex.def Info: img/velVMach.jpg used on input line 11.
 <img/CdVMach.jpg, id=27, 562.1pt x 421.575pt>
 File: img/CdVMach.jpg Graphic file (type jpg)
  <use img/CdVMach.jpg>
-Package pdftex.def Info: img/CdVMach.jpg used on input line 30.
-(pdftex.def)             Requested size: 360.0pt x 270.00005pt.
+Package pdftex.def Info: img/CdVMach.jpg used on input line 23.
+(pdftex.def)             Requested size: 216.0022pt x 162.00131pt.
 
 <img/dragVMach.jpg, id=28, 562.1pt x 421.575pt>
 File: img/dragVMach.jpg Graphic file (type jpg)
  <use img/dragVMach.jpg>
-Package pdftex.def Info: img/dragVMach.jpg used on input line 38.
-(pdftex.def)             Requested size: 360.0pt x 270.00005pt.
+Package pdftex.def Info: img/dragVMach.jpg used on input line 33.
+(pdftex.def)             Requested size: 216.0022pt x 162.00131pt.
 
-[5 <./img/CdVMach.jpg>] [6 <./img/dragVMach.jpg>]
-<img/ClCdVMach.jpg, id=37, 562.1pt x 421.575pt>
+[5 <./img/CdVMach.jpg> <./img/dragVMach.jpg>]
+<img/ClCdVMach.jpg, id=33, 562.1pt x 421.575pt>
 File: img/ClCdVMach.jpg Graphic file (type jpg)
  <use img/ClCdVMach.jpg>
-Package pdftex.def Info: img/ClCdVMach.jpg used on input line 69.
-(pdftex.def)             Requested size: 360.0pt x 270.00005pt.
+Package pdftex.def Info: img/ClCdVMach.jpg used on input line 66.
+(pdftex.def)             Requested size: 216.0022pt x 162.00131pt.
 )
-(inletSystem.tex [7 <./img/ClCdVMach.jpg>]) (combustor.tex [8]) (nozzle.tex)
-(heatTransfer.tex [9] [10]
-Overfull \hbox (5.51463pt too wide) in paragraph at lines 17--18
-[]\OT1/cmr/m/n/10.95 The above plot dis-plays the elon-ga-tion, ten-sile streng
-th, and yield strength
- []
+(inletSystem.tex [6 <./img/ClCdVMach.jpg>]) (combustor.tex [7]
+<img/combustorIsoView.png, id=41, 642.14906pt x 344.78813pt>
+File: img/combustorIsoView.png Graphic file (type png)
 
-(wingHeating.tex [11] [12]
+<use img/combustorIsoView.png>
+Package pdftex.def Info: img/combustorIsoView.png used on input line 11.
+(pdftex.def)             Requested size: 251.9989pt x 135.30333pt.
+ [8 <./img/combustorIsoView.png>]) (nozzle.tex
+<img/aerospikeContour.png, id=47, 419.5675pt x 313.17pt>
+File: img/aerospikeContour.png Graphic file (type png)
+
+<use img/aerospikeContour.png>
+Package pdftex.def Info: img/aerospikeContour.png used on input line 7.
+(pdftex.def)             Requested size: 216.0022pt x 161.22461pt.
+ [9]
+<img/aerospikePressure.png, id=51, 446.66875pt x 334.24875pt>
+File: img/aerospikePressure.png Graphic file (type png)
+
+<use img/aerospikePressure.png>
+Package pdftex.def Info: img/aerospikePressure.png used on input line 17.
+(pdftex.def)             Requested size: 216.0022pt x 161.64122pt.
+ [10 <./img/aerospikeContour.png>]
+<img/nozzleIsoView.png, id=56, 341.275pt x 288.07625pt>
+File: img/nozzleIsoView.png Graphic file (type png)
+
+<use img/nozzleIsoView.png>
+Package pdftex.def Info: img/nozzleIsoView.png used on input line 25.
+(pdftex.def)             Requested size: 180.0pt x 151.9412pt.
+) (heatTransfer.tex (coolingCombustor.tex [11 <./img/aerospikePressure.png> <./
+img/nozzleIsoView.png>]
+<img/combustorWallTemps.png, id=64, 402.50375pt x 392.46625pt>
+File: img/combustorWallTemps.png Graphic file (type png)
+
+<use img/combustorWallTemps.png>
+Package pdftex.def Info: img/combustorWallTemps.png used on input line 21.
+(pdftex.def)             Requested size: 216.0022pt x 210.61113pt.
+ [12 <./img/combustorWallTemps.png (PNG copy)>] <img/incoloyPlot.png, id=70, 33
+0.23375pt x 299.1175pt>
+File: img/incoloyPlot.png Graphic file (type png)
+
+<use img/incoloyPlot.png>
+Package pdftex.def Info: img/incoloyPlot.png used on input line 31.
+(pdftex.def)             Requested size: 216.0022pt x 195.65639pt.
+) [13 <./img/incoloyPlot.png (PNG copy)>]
+(wingHeating.tex [14]
 Overfull \hbox (105.49844pt too wide) detected at line 58
 \OML/cmm/m/it/10.95 Re[] \OT1/cmr/m/n/10.95 = []\OML/cmm/m/it/10.95 IfRe[] < \O
 T1/cmr/m/n/10.95 500\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 000\OML/cmm/m/it/1
@@ -634,31 +671,46 @@ T1/cmr/m/n/10.95 500\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 000\OML/cmm/m/it/1
  \OT1/cmr/m/n/10.95 000\OML/cmm/m/it/10.95 ; Turbulentboundarylayer
  []
 
-[13])) (turbo.tex [14])) (results.tex) (conclusions.tex)
+[15])) (turbo.tex [16] <img/turboSchematic.png, id=83, 770.88pt x 239.89626pt>
+File: img/turboSchematic.png Graphic file (type png)
+
+<use img/turboSchematic.png>
+Package pdftex.def Info: img/turboSchematic.png used on input line 21.
+(pdftex.def)             Requested size: 360.0pt x 112.03012pt.
+ [17]
+<img/turboPressureVMdot.png, id=87, 422.32782pt x 316.18124pt>
+File: img/turboPressureVMdot.png Graphic file (type png)
+
+<use img/turboPressureVMdot.png>
+Package pdftex.def Info: img/turboPressureVMdot.png used on input line 30.
+(pdftex.def)             Requested size: 216.0022pt x 161.71828pt.
+ [18 <./img/turboSchematic.png> <./img/turboPressureVMdot.png (PNG copy)>])) (r
+esults.tex) (conclusions.tex)
 No file main.bbl.
-(appendix.tex) [15] (main.aux) ) 
+(appendix.tex) [19] [20] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 3500 strings out of 493335
- 44893 string characters out of 3139253
- 114908 words of memory out of 3000000
- 6907 multiletter control sequences out of 15000+200000
+ 3553 strings out of 493335
+ 46204 string characters out of 3139253
+ 115002 words of memory out of 3000000
+ 6949 multiletter control sequences out of 15000+200000
  11352 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,17n,25p,1814b,227s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cme
-x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmsy8.pfb>
-Output written on main.pdf (16 pages, 257433 bytes).
+ 40i,17n,25p,1814b,268s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy8.pfb>
+Output written on main.pdf (21 pages, 808699 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
+ 137 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
