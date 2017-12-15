@@ -16,7 +16,8 @@ GHV_Aero_Ref_Area = 6026; %[sq.in]
 ScalingFactor = Aero_Ref_Area/GHV_Aero_Ref_Area; %[Nondim]
 
 %Determine gross weight from wing loading and aero reference area
-weight_gross = (wing_loading/144)*Aero_Ref_Area; %[lbm]
+%weight_gross = (wing_loading/144)*Aero_Ref_Area; %[lbm]
+weight_gross = 661; %[lbm]
 
 structural_mass_fraction = 0.496; %[Nondim] from Prashanth
 misc_mass_fraction = round(-0.0001*weight_gross + 0.3226,3); %[Nondim] Curve fit of data from Prashanth
