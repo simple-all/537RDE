@@ -4,25 +4,25 @@
 \contentsline {section}{\numberline {3}Design Methodology}{3}
 \contentsline {subsection}{\numberline {3.1}Mission Design and Constraints}{3}
 \contentsline {subsection}{\numberline {3.2}Vehicle Trajectory [Andy McClaskey]}{3}
-\contentsline {subsection}{\numberline {3.3}Aerodynamic Performance Analysis [Andy McClaskey]}{3}
-\contentsline {paragraph}{Aerodynamic Reference Area}{3}
-\contentsline {paragraph}{Drag Determination}{3}
-\contentsline {paragraph}{Thrust Required}{3}
-\contentsline {paragraph}{Lift Determination}{3}
-\contentsline {paragraph}{Lift over Drag}{3}
-\contentsline {subsection}{\numberline {3.4}Inlet, Isolator, and Compression Duct [Thomas Satterly]}{4}
-\contentsline {paragraph}{Inlet}{4}
-\contentsline {paragraph}{Isolator}{4}
-\contentsline {paragraph}{Compression Duct}{4}
-\contentsline {subsection}{\numberline {3.5}Combustor [Thomas Satterly]}{5}
-\contentsline {subsection}{\numberline {3.6}Nozzle [Gabriel Diez]}{6}
-\contentsline {subsection}{\numberline {3.7}Cooling}{6}
-\contentsline {subsubsection}{\numberline {3.7.1}Combustor [Cameron Ellis]}{6}
-\contentsline {subsubsection}{\numberline {3.7.2}Nozzle [Gabriel Diez]}{7}
-\contentsline {subsubsection}{\numberline {3.7.3}Wings and Leading Edges [Alberto Marin Cebrian]}{8}
-\contentsline {paragraph}{Inlet Cone Tip and Wing Leading Edges}{8}
-\contentsline {paragraph}{Wing Surface Temperature}{8}
-\contentsline {subsection}{\numberline {3.8}Turbopump and Tank Sizing [Drew Sherman]}{9}
-\contentsline {section}{\numberline {4}Results}{11}
-\contentsline {section}{\numberline {5}Conclusions}{11}
-\contentsline {section}{\numberline {6}Appendix}{11}
+\contentsline {subsection}{\numberline {3.3}Aerodynamic Performance Analysis [Andy McClaskey]}{4}
+\contentsline {paragraph}{Aerodynamic Reference Area}{4}
+\contentsline {paragraph}{Drag Determination}{4}
+\contentsline {paragraph}{Thrust Required}{6}
+\contentsline {paragraph}{Lift Determination}{6}
+\contentsline {paragraph}{Lift over Drag}{6}
+\contentsline {subsection}{\numberline {3.4}Inlet, Isolator, and Compression Duct [Thomas Satterly]}{7}
+\contentsline {paragraph}{Inlet}{7}
+\contentsline {paragraph}{Isolator}{8}
+\contentsline {paragraph}{Compression Duct}{8}
+\contentsline {subsection}{\numberline {3.5}Combustor [Thomas Satterly]}{8}
+\contentsline {subsection}{\numberline {3.6}Nozzle [Gabriel Diez]}{9}
+\contentsline {subsection}{\numberline {3.7}Heat Transfer}{10}
+\contentsline {subsubsection}{\numberline {3.7.1}Combustor [Cameron Ellis]}{10}
+\contentsline {subsubsection}{\numberline {3.7.2}Nozzle [Gabriel Diez]}{11}
+\contentsline {subsubsection}{\numberline {3.7.3}Wings and Leading Edges [Alberto Marin Cebrian]}{11}
+\contentsline {paragraph}{Inlet Cone Tip and Wing Leading Edges}{12}
+\contentsline {paragraph}{Wing Surface Temperature}{13}
+\contentsline {subsection}{\numberline {3.8}Turbopump and Tank Sizing [Drew Sherman]}{14}
+\contentsline {section}{\numberline {4}Results}{15}
+\contentsline {section}{\numberline {5}Conclusions}{15}
+\contentsline {section}{\numberline {6}Appendix}{15}
