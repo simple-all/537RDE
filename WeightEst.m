@@ -64,7 +64,7 @@ Avionics = 294;
 
 P_operating = 14.7;
 Volume_tank = 2257.8;
-tankWeight = 3.2;
+tankWeight = 3.2 * 2.2;
 
 
 isRho = 4506; % Density of titanium [kg/m^3]
@@ -116,7 +116,7 @@ ballastWeight = polyval(ppBalast, refArea);
 % Turbopump
 turboWeight = 11.7;
 
-totalWeight =aeroTotalWeight + fuel + Avionics + tankWeight + coneWeight + isWeight + nozzleWeight + combWeight + ballastWeight + turboWeight;
+totalWeight =aeroTotalWeight + fuel + Avionics + tankWeight + coneWeight + isWeight + nozzleWeight + combWeight + ballastWeight;
 
 w = [100 300 600];
 M = [9.4 7.8 5.6];

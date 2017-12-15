@@ -8,7 +8,7 @@
 \end{center}
 \end{figure}
 
-\begin{figure}{r}[H]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=0.6\textwidth]{velVMach}
 \caption{Velocity v. Mach}
@@ -41,13 +41,23 @@
 \end{figure}
 
 
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{wingTemps}
+\caption{Wing Surface Temperature Plot}
+\label{fig:wingTemps}
+\end{center}
+\end{figure}
+
+
+\newpage
 \section{Appendix B: Equations}
 
 \begin{equation}
 \begin{split}
-Re_x=\frac{\rho u x}{\mu}	
-If   Re_x<500,000, \text{  Laminar boundary layer} \\
-	If   Re_x>500,000, \text{  Turbulent boundary layer}
+Re_x=\frac{\rho u x}{\mu}	\\
+\text{If } Re_x<500,000, \text{ Laminar boundary layer} \\
+\text{If }   Re_x>500,000, \text{ Turbulent boundary layer}
 \end{split}
 \label{eqn:reynolds}
 \end{equation}
@@ -62,3 +72,39 @@ Pr=\frac{\mu Cp}{K}
 Nu_x=\frac{h_g x}{K}
 \label{eqn:nusselt}
 \end{equation}
+
+\newpage
+\section{Appendix C: Air Properties}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{airCpvT}
+\caption{Specific Heat v. Temperature for Air}
+\label{fig:airCpvT}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{airKvT}
+\caption{Conduction Heat Transfer Coefficient v. Temperature for Air}
+\label{fig:airKvT}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{airNuvT}
+\caption{Kinematic Viscosity v. Temperature for Air}
+\label{fig:airNuvT}
+\end{center}
+\end{figure}
+
+\newpage
+\section{Appendix D: Chapman-Jouguet Detonation Model}
+\textit{This page intentionally left blank}
+
+\newpage
+\section{Appendix E: Alternative RDE Analysis Model}
+\textit{This page intentionally left blank}
+
