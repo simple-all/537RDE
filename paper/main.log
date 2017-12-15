@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.10)  14 DEC 2017 19:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.10)  14 DEC 2017 22:20
 entering extended mode
 **./main.tex
 (main.tex
@@ -457,21 +457,62 @@ Package tocbibind Info: The document has section divisions on input line 50.
 
 Package tocbibind Note: Using section or other style headings.
 
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count118
-\float@exts=\toks21
-\float@box=\box28
-\@float@everytoks=\toks22
-\@floatcapt=\box29
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks21
+\verbatim@line=\toks22
+\verbatim@in@stream=\read1
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks23
 )
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count118
+\Gm@cntv=\count119
+\c@Gm@tempcnt=\count120
+\Gm@bindingoffset=\dimen113
+\Gm@wd@mp=\dimen114
+\Gm@odd@mp=\dimen115
+\Gm@even@mp=\dimen116
+\Gm@layoutwidth=\dimen117
+\Gm@layoutheight=\dimen118
+\Gm@layouthoffset=\dimen119
+\Gm@layoutvoffset=\dimen120
+\Gm@dimlist=\toks24
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+
+Package geometry Warning: Over-specification in `h'-direction.
+    `width' (483.69684pt) is ignored.
+
+
+Package geometry Warning: Over-specification in `v'-direction.
+    `height' (731.23582pt) is ignored.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count121
+\float@exts=\toks25
+\float@box=\box28
+\@float@everytoks=\toks26
+\@floatcapt=\box29
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2016/06/02 v1.0s Standard LaTeX Graphics (DPC,SPQR)
 
@@ -492,39 +533,73 @@ Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count119
+\Gread@gobject=\count122
 ))
-\Gin@req@height=\dimen113
-\Gin@req@width=\dimen114
+\Gin@req@height=\dimen121
+\Gin@req@width=\dimen122
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (C:\Users\tsatter\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count120
-\scratchdimen=\dimen115
+\scratchcounter=\count123
+\scratchdimen=\dimen123
 \scratchbox=\box30
-\nofMPsegments=\count121
-\nofMParguments=\count122
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count123
-\MPscratchDim=\dimen116
-\MPnumerator=\count124
-\makeMPintoPDFobject=\count125
-\everyMPtoPDFconversion=\toks25
+\nofMPsegments=\count124
+\nofMParguments=\count125
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count126
+\MPscratchDim=\dimen124
+\MPnumerator=\count127
+\makeMPintoPDFobject=\count128
+\everyMPtoPDFconversion=\toks28
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -532,9 +607,6 @@ Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -570,12 +642,12 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 34.
+LaTeX Font Info:    Try loading font information for U+msa on input line 47.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 34.
+LaTeX Font Info:    Try loading font information for U+msb on input line 47.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -587,130 +659,123 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout3 = `main.toc'.
 
  [1]
-(abstract.tex) (introduction.tex) (design.tex (vehicleTraj.tex [2]
-<img/altVMach.jpg, id=16, 562.1pt x 421.575pt>
+(abstract.tex) (introduction.tex) (design.tex (vehicleTraj.tex
+<img/altVMach.jpg, id=13, 562.1pt x 421.575pt>
 File: img/altVMach.jpg Graphic file (type jpg)
  <use img/altVMach.jpg>
-Package pdftex.def Info: img/altVMach.jpg used on input line 5.
-(pdftex.def)             Requested size: 360.0pt x 270.00005pt.
-
+Package pdftex.def Info: img/altVMach.jpg used on input line 6.
+(pdftex.def)             Requested size: 290.22107pt x 217.66354pt.
+ [2]
 <img/velVMach.jpg, id=17, 562.1pt x 421.575pt>
 File: img/velVMach.jpg Graphic file (type jpg)
  <use img/velVMach.jpg>
-Package pdftex.def Info: img/velVMach.jpg used on input line 11.
-(pdftex.def)             Requested size: 360.0pt x 270.00005pt.
- [3 <./img/altVMach.jpg>]) (aeroPerformance.tex [4 <./img/velVMach.jpg>]
-<img/CdVMach.jpg, id=27, 562.1pt x 421.575pt>
+Package pdftex.def Info: img/velVMach.jpg used on input line 14.
+(pdftex.def)             Requested size: 290.22107pt x 217.66354pt.
+)
+(aeroPerformance.tex [3 <./img/altVMach.jpg> <./img/velVMach.jpg>]
+<img/CdVMach.jpg, id=23, 562.1pt x 421.575pt>
 File: img/CdVMach.jpg Graphic file (type jpg)
  <use img/CdVMach.jpg>
 Package pdftex.def Info: img/CdVMach.jpg used on input line 23.
-(pdftex.def)             Requested size: 216.0022pt x 162.00131pt.
+(pdftex.def)             Requested size: 290.22107pt x 217.66354pt.
 
-<img/dragVMach.jpg, id=28, 562.1pt x 421.575pt>
-File: img/dragVMach.jpg Graphic file (type jpg)
- <use img/dragVMach.jpg>
-Package pdftex.def Info: img/dragVMach.jpg used on input line 33.
-(pdftex.def)             Requested size: 216.0022pt x 162.00131pt.
-
-[5 <./img/CdVMach.jpg> <./img/dragVMach.jpg>]
-<img/ClCdVMach.jpg, id=33, 562.1pt x 421.575pt>
+<img/ClCdVMach.jpg, id=24, 562.1pt x 421.575pt>
 File: img/ClCdVMach.jpg Graphic file (type jpg)
  <use img/ClCdVMach.jpg>
-Package pdftex.def Info: img/ClCdVMach.jpg used on input line 66.
-(pdftex.def)             Requested size: 216.0022pt x 162.00131pt.
+Package pdftex.def Info: img/ClCdVMach.jpg used on input line 69.
+(pdftex.def)             Requested size: 290.22107pt x 217.66354pt.
 )
-(inletSystem.tex [6 <./img/ClCdVMach.jpg>]) (combustor.tex [7]
-<img/combustorIsoView.png, id=41, 642.14906pt x 344.78813pt>
+(inletSystem.tex [4 <./img/CdVMach.jpg>]
+<img/coneVari.png, id=30, 368.1253pt x 148.30406pt>
+File: img/coneVari.png Graphic file (type png)
+ <use img/coneVari.png>
+Package pdftex.def Info: img/coneVari.png used on input line 9.
+(pdftex.def)             Requested size: 290.22107pt x 116.92809pt.
+
+[5 <./img/ClCdVMach.jpg> <./img/coneVari.png>]) (combustor.tex
+<img/combustorIsoView.png, id=36, 642.14906pt x 344.78813pt>
 File: img/combustorIsoView.png Graphic file (type png)
 
 <use img/combustorIsoView.png>
 Package pdftex.def Info: img/combustorIsoView.png used on input line 11.
-(pdftex.def)             Requested size: 251.9989pt x 135.30333pt.
- [8 <./img/combustorIsoView.png>]) (nozzle.tex
-<img/aerospikeContour.png, id=47, 419.5675pt x 313.17pt>
+(pdftex.def)             Requested size: 338.58632pt x 181.80037pt.
+ [6 <./img/combustorIsoView.png>]) (nozzle.tex
+<img/aerospikeContour.png, id=42, 419.5675pt x 313.17pt>
 File: img/aerospikeContour.png Graphic file (type png)
 
 <use img/aerospikeContour.png>
 Package pdftex.def Info: img/aerospikeContour.png used on input line 7.
-(pdftex.def)             Requested size: 216.0022pt x 161.22461pt.
- [9]
-<img/aerospikePressure.png, id=51, 446.66875pt x 334.24875pt>
+(pdftex.def)             Requested size: 290.22107pt x 216.62273pt.
+ [7 <./img/aerospikeContour.png>]
+<img/aerospikePressure.png, id=47, 446.66875pt x 334.24875pt>
 File: img/aerospikePressure.png Graphic file (type png)
 
 <use img/aerospikePressure.png>
 Package pdftex.def Info: img/aerospikePressure.png used on input line 17.
-(pdftex.def)             Requested size: 216.0022pt x 161.64122pt.
- [10 <./img/aerospikeContour.png>]
-<img/nozzleIsoView.png, id=56, 341.275pt x 288.07625pt>
+(pdftex.def)             Requested size: 290.22107pt x 217.1775pt.
+
+<img/nozzleIsoView.png, id=48, 341.275pt x 288.07625pt>
 File: img/nozzleIsoView.png Graphic file (type png)
 
 <use img/nozzleIsoView.png>
 Package pdftex.def Info: img/nozzleIsoView.png used on input line 25.
-(pdftex.def)             Requested size: 180.0pt x 151.9412pt.
-) (heatTransfer.tex (coolingCombustor.tex [11 <./img/aerospikePressure.png> <./
-img/nozzleIsoView.png>]
-<img/combustorWallTemps.png, id=64, 402.50375pt x 392.46625pt>
+(pdftex.def)             Requested size: 241.84843pt x 204.15312pt.
+) (heatTransfer.tex (coolingCombustor.tex [8 <./img/aerospikePressure.png> <./i
+mg/nozzleIsoView.png>]
+<img/combustorWallTemps.png, id=54, 402.50375pt x 392.46625pt>
 File: img/combustorWallTemps.png Graphic file (type png)
 
 <use img/combustorWallTemps.png>
 Package pdftex.def Info: img/combustorWallTemps.png used on input line 21.
-(pdftex.def)             Requested size: 216.0022pt x 210.61113pt.
- [12 <./img/combustorWallTemps.png (PNG copy)>] <img/incoloyPlot.png, id=70, 33
-0.23375pt x 299.1175pt>
+(pdftex.def)             Requested size: 290.22107pt x 282.98268pt.
+ [9 <./img/combustorWallTemps.png (PNG copy)>]
+<img/incoloyPlot.png, id=61, 330.23375pt x 299.1175pt>
 File: img/incoloyPlot.png Graphic file (type png)
 
 <use img/incoloyPlot.png>
 Package pdftex.def Info: img/incoloyPlot.png used on input line 31.
-(pdftex.def)             Requested size: 216.0022pt x 195.65639pt.
-) [13 <./img/incoloyPlot.png (PNG copy)>]
-(wingHeating.tex [14]
-Overfull \hbox (105.49844pt too wide) detected at line 58
-\OML/cmm/m/it/10.95 Re[] \OT1/cmr/m/n/10.95 = []\OML/cmm/m/it/10.95 IfRe[] < \O
-T1/cmr/m/n/10.95 500\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 000\OML/cmm/m/it/1
-0.95 ; LaminarboundarylayerIfRe[] > \OT1/cmr/m/n/10.95 500\OML/cmm/m/it/10.95 ;
- \OT1/cmr/m/n/10.95 000\OML/cmm/m/it/10.95 ; Turbulentboundarylayer
- []
-
-[15])) (turbo.tex [16] <img/turboSchematic.png, id=83, 770.88pt x 239.89626pt>
+(pdftex.def)             Requested size: 290.22107pt x 262.8819pt.
+) [10 <./img/incoloyPlot.png (PNG copy)>]
+(wingHeating.tex [11])) (turbo.tex [12]
+<img/turboSchematic.png, id=72, 770.88pt x 239.89626pt>
 File: img/turboSchematic.png Graphic file (type png)
 
 <use img/turboSchematic.png>
 Package pdftex.def Info: img/turboSchematic.png used on input line 21.
-(pdftex.def)             Requested size: 360.0pt x 112.03012pt.
- [17]
-<img/turboPressureVMdot.png, id=87, 422.32782pt x 316.18124pt>
+(pdftex.def)             Requested size: 483.69687pt x 150.52412pt.
+
+<img/turboPressureVMdot.png, id=73, 422.32782pt x 316.18124pt>
 File: img/turboPressureVMdot.png Graphic file (type png)
 
 <use img/turboPressureVMdot.png>
 Package pdftex.def Info: img/turboPressureVMdot.png used on input line 30.
-(pdftex.def)             Requested size: 216.0022pt x 161.71828pt.
- [18 <./img/turboSchematic.png> <./img/turboPressureVMdot.png (PNG copy)>])) (r
-esults.tex) (conclusions.tex)
-No file main.bbl.
-(appendix.tex) [19] [20] (main.aux) ) 
+(pdftex.def)             Requested size: 290.22107pt x 217.2824pt.
+ [13 <./img/turboSchematic.png>])) (results.tex [14 <./img/turboPressureVMdot.p
+ng (PNG copy)>]) (conclusions.tex) (main.bbl)
+(appendix.tex) [15] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 3553 strings out of 493335
- 46204 string characters out of 3139253
- 115002 words of memory out of 3000000
- 6949 multiletter control sequences out of 15000+200000
- 11352 words of font info for 43 fonts, out of 3000000 for 9000
+ 4072 strings out of 493335
+ 53930 string characters out of 3139253
+ 131606 words of memory out of 3000000
+ 7451 multiletter control sequences out of 15000+200000
+ 11698 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,17n,25p,1814b,268s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmsy8.pfb>
-Output written on main.pdf (21 pages, 808699 bytes).
+ 40i,17n,28p,1814b,266s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cme
+x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (16 pages, 808355 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
+ 126 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

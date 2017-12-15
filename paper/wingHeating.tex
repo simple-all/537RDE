@@ -38,10 +38,21 @@ The radiation heat flux has been calculated with the Stefan-Boltzman equation.
 \dot{q}_{rad}=\sigma_s (\eta_w T_w^4-T_0^4)
 \end{equation}
 
-Steady state solution is reached when $\dot{q}=\dot{q}_{rad}$.
+The steady state solution is reached when $\dot{q}=\dot{q}_{rad}$.
 
+\begin{center}
+\begin{tabular}{l c c}
+& Inlet Cone Tip & Wing Leading Edge \\
+\hline
+Nose Radius (m) & $1*10^{-3}$ & $1.27 * 10^{-2}$ \\
+Temperature (K) & 1962 & 1435 \\
+Material & Tantalum & Nichrome \\
+Maximum Operating Temperature & 3023 & 1573 \\
+Emmissivity & 0.225 & 0.89
+\end{tabular}
+\end{center}
 
-*This value has been guessed and based on the manufacturing tolerance it may change significantly. On the one hand, a bigger nose radius will decrease the temperature of the cone tip but it will decrease the performance of the inlet adding more drag. On the other hand, a smaller nose radius will be beneficial for the inlet performance but it will increase the temperature of the inlet cone. This value must be small enough not to affect significantly the inlet performance but big enough to be manufactured and get a temperature that lies inside the operating range of the material.
+The cone tip radius value has been estimated and based on the manufacturing tolerance it may change significantly. On the one hand, a bigger nose radius will decrease the temperature of the cone tip but it will decrease the performance of the inlet adding more drag. On the other hand, a smaller nose radius will be beneficial for the inlet performance but it will increase the temperature of the inlet cone. This value must be small enough not to affect significantly the inlet performance but big enough to be manufactured and get a temperature that lies inside the operating range of the material.
 
 \paragraph{Wing Surface Temperature}
 In order to obtain the temperature field over the wing of the aircraft the following assumptions have been made.
@@ -52,9 +63,11 @@ In order to obtain the temperature field over the wing of the aircraft the follo
 Some important non-dimensional parameters that control the physics of this problem are the Reynolds number, the Prandtl number and the Nusselt number.
 The Reynolds number relates the inertial and viscous effects. It determines the change from laminar to turbulent flow in the boundary layer. For a flat plate, the transition Reynolds number from laminar to turbulent is 500,000.
 \begin{equation}
+\begin{split}
 Re_x=\frac{\rho u x}{\mu}	
-If   Re_x<500,000, Laminar boundary layer
-	If   Re_x>500,000, Turbulent boundary layer
+If   Re_x<500,000, \text{  Laminar boundary layer} \\
+	If   Re_x>500,000, \text{  Turbulent boundary layer}
+\end{split}
 \end{equation}
 
 The Prandtl is a dimensionless parameter representing the ratio of diffusion of momentum to diffusion of heat in a fluid. [2]

@@ -6,11 +6,24 @@
 \usepackage{blindtext}
 \usepackage[english]{babel}
 \usepackage[nottoc]{tocbibind}
+\usepackage{verbatim}
+
+% Adjust margins
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	right=20mm,
+	top=20mm,
+	bottom=20mm,
+}
 
 % Graphics packages
 \usepackage{float}
 \usepackage{graphicx}
 \graphicspath{ {img/} }
+\bibstyle{plain}
 
 % Define the title page
 \title{Gas Fueled RDE Scramjet}
@@ -47,6 +60,7 @@
 % Conclusions
 \input{conclusions.tex}
 % References
+\bibliographystyle{plain}
 \bibliography{bibliography}
 % Appendix
 \input{appendix.tex}
