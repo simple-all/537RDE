@@ -6,24 +6,27 @@
 \contentsline {subsection}{\numberline {3.2}Vehicle Trajectory [Andy McClaskey]}{2}
 \contentsline {subsection}{\numberline {3.3}Aerodynamic Performance Analysis [Andy McClaskey]}{3}
 \contentsline {paragraph}{Aerodynamic Reference Area}{3}
-\contentsline {paragraph}{Drag Determination}{4}
+\contentsline {paragraph}{Drag Determination}{3}
 \contentsline {paragraph}{Thrust Required}{4}
 \contentsline {paragraph}{Lift Determination}{4}
 \contentsline {paragraph}{Lift over Drag}{4}
 \contentsline {subsection}{\numberline {3.4}Inlet, Isolator, and Compression Duct [Thomas Satterly]}{5}
 \contentsline {paragraph}{Inlet}{5}
 \contentsline {paragraph}{Isolator}{5}
-\contentsline {paragraph}{Compression Duct}{6}
+\contentsline {paragraph}{Compression Duct}{5}
 \contentsline {subsection}{\numberline {3.5}Combustor [Thomas Satterly]}{6}
 \contentsline {subsection}{\numberline {3.6}Nozzle [Gabriel Diez]}{7}
-\contentsline {subsection}{\numberline {3.7}Heat Transfer}{9}
-\contentsline {subsubsection}{\numberline {3.7.1}Combustor [Cameron Ellis]}{9}
+\contentsline {subsection}{\numberline {3.7}Heat Transfer}{8}
+\contentsline {subsubsection}{\numberline {3.7.1}Combustor [Cameron Ellis]}{8}
 \contentsline {subsubsection}{\numberline {3.7.2}Nozzle [Gabriel Diez]}{10}
-\contentsline {subsubsection}{\numberline {3.7.3}Wings and Leading Edges [Alberto Marin Cebrian]}{11}
-\contentsline {paragraph}{Inlet Cone Tip and Wing Leading Edges}{11}
-\contentsline {paragraph}{Wing Surface Temperature}{12}
-\contentsline {subsection}{\numberline {3.8}Turbopump and Tank Sizing [Drew Sherman]}{13}
+\contentsline {subsubsection}{\numberline {3.7.3}Wings and Leading Edges [Alberto Marin Cebrian]}{10}
+\contentsline {paragraph}{Inlet Cone Tip and Wing Leading Edges}{10}
+\contentsline {paragraph}{Convective heat flux on the inlet cone tip}{11}
+\contentsline {paragraph}{Convective heat flux on the wing leading edge}{11}
+\contentsline {paragraph}{Radiation heat flux}{11}
+\contentsline {paragraph}{Wing Surface Temperature}{11}
+\contentsline {subsection}{\numberline {3.8}Turbopump and Tank Sizing [Drew Sherman]}{12}
 \contentsline {section}{\numberline {4}Results}{15}
 \contentsline {section}{\numberline {5}Conclusions}{15}
-\contentsline {section}{References}{15}
-\contentsline {section}{\numberline {6}Appendix}{15}
+\contentsline {section}{References}{16}
+\contentsline {section}{\numberline {6}Appendix}{17}

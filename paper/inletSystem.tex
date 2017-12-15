@@ -1,7 +1,7 @@
 \subsection{Inlet, Isolator, and Compression Duct [Thomas Satterly]}
 \paragraph{Inlet}
 
-The inlet was designed to provide the desired mass flow rate at cruise conditions whilst being capable of starting at Mach 5.5. Additionally, the geometry must be axisymmetric in order for a smooth flowpath from the inlet to the RDE. To satisfy these constraints, a simple conical inlet with variable geometry was selected. 
+The inlet was designed to provide the desired mass flow rate (3.5 kg/s) at cruise conditions whilst being capable of starting at Mach 5.5. Additionally, the geometry must be axisymmetric in order for a smooth flowpath from the inlet to the RDE. To satisfy these constraints, a simple conical inlet with variable geometry was selected. 
 A cone with a half angle of 5 degrees was selected to minimize pressure loss and heat transfer at the inlet. By solving the Taylor-Maccoll equations for a conical shock, the outer cowl was sized to place the shock at the cowl during cruise conditions. In order to avoid mass flow loss and extra drag due to spillage at the starting conditions, a variable geometry cone is desirable to keep the shock at the cowl. This is achieved by shifting the inlet cone axially during acceleration. For this inlet to perform as desired between Mach 5.5 and 6.5, the cone only needs to be able to move 2.6 cm in total. The extremes of the cone position, as well as the shock placement on the cowl, can be seen in Figure \ref{fig:coneVari}.
 
 \begin{figure}[H]
@@ -16,8 +16,16 @@ A cone with a half angle of 5 degrees was selected to minimize pressure loss and
 
     The isolator was designed using a combination of industry accepted assumptions and correlations rather than a complete shock train analysis, given that this is a preliminary design. A constant area annular duct was chosen for the general geometry, as it would transition easily from the conical inlet and minimally disrupt the flow as it approaches the combustor. 
 A major assumption made was that the exit Mach from the isolator is 1/2 of the entrance Mach to the inlet. Typically, this ratio is closer to 1/3, but a great advantage of the RDE is the possibility to maintain combustion at high Mach numbers. If this design exercise is to be forward-looking, it is not unreasonable to assume that more capable isolators will also be developed in the future. 
-    The total pressure ratio of the isolator is taken from MilStd 5007D \cite{milstd5007D}, which is a relationship between free stream Mach and total pressure ratio that has been standardized to allow for preliminary design and sizing of an inlet and isolator system without spending valuable resources on an extensive flow analysis. Finally, the length of the inlet was derived using the Waltrup and Billig correlations \cite{waltrup}.
+    The total pressure ratio of the isolator is taken from MilStd 5007D \cite{milstd5007D}, which is a relationship between free stream Mach and total pressure ratio that has been standardized to allow for preliminary design and sizing of an inlet and isolator system without spending valuable resources on an extensive flow analysis. Finally, the length of the inlet was derived using the Waltrup and Billig correlations \cite{waltrup}. The final isolator parameters are shown in table \ref{tab:isoParams}.
 
+\begin{center}
+\begin{tabular}{l c}
+L/D  & 18 \\
+Mach Ratio & 0.5 \\
+Total Pressure Ration & 0.294
+\label{tab:isoParams}
+\end{tabular}
+\end{center}
 
 \paragraph{Compression Duct}
 

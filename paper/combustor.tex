@@ -1,8 +1,27 @@
 \subsection{Combustor [Thomas Satterly]}
-The chosen combustor was a gaseous ethylene fueled RDE. The sizing of the combustion chamber was based off of the Bykovskii \ref{bykovskii} guidelines and experimentally observed cell sizes for gaseous ethylene \cite{cellsize}. Chapman-Jouget detonation parameters were calculated using the NASA CEA program, and the RDE performance was analyzed using the model proposed by Stechmann (REF XXX). The mass flow rate, minimum pressure, and minimum temperature were varied and the design iterated, along with the inlet, isolator, and compression duct, until a reasonable flow path was found with acceptable performance. 
-    From experimental data collected by Bul et. al. \cite{cellsize}, the approximate cell size of an ethylene-air mixture at 195 kPa is approximately 12.6 mm. From the guidelines given by Bykovskii in equations EQ through EQ, the bounds on the RDE size can be calculated.
+The chosen combustor was a gaseous ethylene fueled RDE. The sizing of the combustion chamber was based off of the Bykovskii \cite{bykovskii} guidelines and experimentally observed cell sizes for gaseous ethylene \cite{cellsize}. Chapman-Jouget detonation parameters were calculated using the NASA CEA program, and the RDE performance was analyzed using the model proposed by Stechmann (REF XXX). The mass flow rate, minimum pressure, and minimum temperature were varied and the design iterated, along with the inlet, isolator, and compression duct, until a reasonable flow path was found with acceptable performance. 
 
-< Bykovskii equations here>
+From experimental data collected by Bull et. al. \cite{cellsize}, the approximate cell size of an ethylene-air mixture at 195 kPa is approximately 12.6 mm. From the guidelines given by Bykovskii in equations \ref{eqn:rdeH} through \ref{eqn:rdeGap}, the bounds on the RDE size can be calculated.
+
+\begin{equation}
+h\cong(12\pm5)a
+\label{eqn:rdeH}
+\end{equation}
+
+\begin{equation}
+(d_c)_{min}=\frac{h(7\pm2)}{\pi}
+\label{eqn:rdeDia}
+\end{equation}
+
+\begin{equation}
+L_{min}\cong2h
+\label{eqn:rdeLength}
+\end{equation}
+
+\begin{equation}
+\Delta\cong0.2h
+\label{eqn:rdeGap}
+\end{equation}
 
     From these guidelines, the RDE outer diameter was chosen at 0.2035 m with an inner diameter of 0.16 m and a total length of 0.254 m. A CAD model of the combustor can be seen in figure \ref{fig:combustorIsoView}.
 

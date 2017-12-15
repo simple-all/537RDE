@@ -1,12 +1,68 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{milstd5007D}
-MilStd.
-\newblock Military specification. general specification for engines, aircraft,
-  turbojet, and turbofan, October 1973.
+MilStd 5007D.
+\newblock General specification for engines, aircraft, turbojet, and turbofan,
+  October 1973.
+
+\bibitem{catalyst}
+R.~A. Blank, T.~L. Pourpoint, S.~E. Meyer, S.~D. Heister, and W.~E. Anderson.
+\newblock {\em Experimental and Theoretical Performance of High-Pressure
+  Hydrogen Peroxide Catalyst Beds}, volume~28.
+\newblock Journal of Propulsion and Power, 2012.
+
+\bibitem{cellsize}
+D.~C. Bull, J.~E. Elsworth, P.~J. Shuff, and E.~Metcalfe.
+\newblock {\em Detonation Cell Structures in Fuel/Air Mixtures}, volume~45.
+\newblock Combustion and Flame, 1982.
+
+\bibitem{bykovskii}
+Fedor~A. Bykovskii, Sergey~A. Zhdan, and Evgenii~F. Vedernikov.
+\newblock {\em Continous Spin Detonations}, volume~22.
+\newblock Journal of Propulsion and Power, November 2006.
+
+\bibitem{sutton}
+A.~Csomor and R.~Sutton.
+\newblock {\em Small, High-Pressure Liquid Hydrogen Turbopump}.
+\newblock Rockwell International, Canoga Park, CA, May 1977.
+
+\bibitem{imbaratto}
+David~Michael Imbaratto.
+\newblock The interaction between throttling and thrust vectoring of an annular
+  aerospike nozzle.
+\newblock mathesis, California Polytechnic State University, September 2009.
+
+\bibitem{inco}
+Special Metals.
+\newblock Incoloy alloy 800h \& 800ht.
+\newblock
+  http://www.specialmetals.com/assets/smc/documents/alloys/incoloy/incoloy-alloys-800h-800ht.pdf.
+\newblock Accessed: 2017-12-15.
+
+\bibitem{turbo}
+NASA, editor.
+\newblock {\em Liquid Rocket Engine Centrifugal Flow Turbopumps}.
+\newblock NASA SP-8109, December 1973.
+
+\bibitem{ghv}
+Brent Ruttle, Jacob Stork, and Glenn Liston.
+\newblock {\em Generic Hypersonic Vehicle for Conceptual Analyses}.
+\newblock Air Force Research Lab, 2012.
+
+\bibitem{asme}
+Walter~J. Sperko.
+\newblock Reduction of design margin (“safety factor”) in the asme boiler
+  and pressure vessel code in the 1999 addenda.
+\newblock {\em Sperko Engineering}, June 2000.
+
+\bibitem{tick}
+S.~J. Tick, G.~R. Huson, and R.~Griese.
+\newblock {\em Design of Ablative Thrust Chambers and Their Materials},
+  volume~2.
+\newblock AIAA Journal, May 1965.
 
 \bibitem{waltrup}
-F.~S.~Billig P.~J.~Waltrup.
+P.~J. Waltrup and F.~S. Billig.
 \newblock {\em Structure of Shock Waves in Cylindrical Ducts}, volume~11.
 \newblock AIAA Journal, 1973.
 

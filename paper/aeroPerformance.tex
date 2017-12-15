@@ -7,41 +7,41 @@ The reference area needed for calculated lift and drag was determined by assumin
 S = (\text{Root Chord} + \text{Tip Chord})*\frac{\text{Wing Span}}{2}
 \end{equation}
 
-The planform was optimized for a drag to help increase the lift to drag ratio later in the design.
+The planform was optimized for a drag to help increase the lift to drag ratio later in the design
 
 \paragraph{Drag Determination}
 
-The Coefficient of Drag ($C_D$) was taken from the 1x scale Generic Hypersonic Vehicle[1] for the angle of attack of zero. Once the coefficient of drag was known, the total drag could be calculated using Equation \ref{eqn:drag}. They dynamic pressure is known from the free stream conditions of the vehicle and the aero reference area is known from above. The Coefficient of Drag is plotted in Figure \ref{fig:CdVMach}.
+The Coefficient of Drag ($C_D$) was taken from the 1x scale Generic Hypersonic Vehicle \cite{ghv} for the angle of attack of zero. Once the coefficient of drag was known, the total drag could be calculated using Equation \ref{eqn:drag}. They dynamic pressure is known from the free stream conditions of the vehicle and the aero reference area is known from above. The Coefficient of Drag is plotted in Figure \ref{fig:CdVMach}.
 
 \begin{equation}
 \label{eqn:drag}
 D = q_{\infty}SC_D
 \end{equation}
 
-\begin{figure}[H]
+\begin{wrapfigure}{r}{0.65\textwidth}
 \begin{center}
 \includegraphics[width=0.6\textwidth]{CdVMach}
 \caption{$C_D$ v. Mach}
 \label{fig:CdVMach}
 \end{center}
-\end{figure}
+\end{wrapfigure}
 
 \begin{comment}
 The total drag for the vehicle is shown in Figure \ref{fig:dragVMach}.
 
-\begin{figure}[H]
+\begin{wrapfigure}{r}{0.65\textwidth}
 \begin{center}
 \includegraphics[width=0.6\textwidth]{dragVMach}
 \caption{Drag v. Mach}
 \label{fig:dragVMach}
 \end{center}
-\end{figure}
+\end{wrapfigure}
 
 \end{comment}
 
 \paragraph{Thrust Required}
 The drag determined above sets the thrust required from the propulsion system for the vehicle in straight and level unaccelerated cruise flight.
-For the acceleration part of the mission the thrust required is calculated using Equation \ref{eqn:thrustRequired}. It was assumed that the pitch angle was small for this analysis.
+For the acceleration part of the mission the thrust required is shown in Equation \ref{eqn:thrustRequired}. It was assumed that the pitch angle was close to zero for this analysis.
 
 \begin{equation}
 \label{eqn:thrustRequired}
